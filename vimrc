@@ -81,16 +81,21 @@ color desert256
 
 if has("gui_running")
     set guioptions=cmgtT
-    set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cANSI
+    "set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cANSI
+    set guifont=Inconsolata_for_Powerline:h13:cANSI
+    "set guifont=Fantasque_Sans_Mono:h13:cANSI
     set printfont=Anka/Coder:h8:cANSI
     set guioptions-=T
-    "set anti
     set selectmode=mouse
     set mouse=a
+    if has("win32")
+        set renderoptions=type:directx,taamode:1,contrast:1,geom:0
+    endif
 endif
 
 if has("gui_macvim")
     set guifont=DejaVu_Sans_Mono:h12
+    set anti
 endif
 
 " do syntax highlight syncing from start
