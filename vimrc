@@ -57,15 +57,6 @@ filetype plugin indent on
 
 let g:pymode_virtualenv = 0
 
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_color_change_percent = 2
-
-"let g:indent_guides_auto_colors = 0
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#111111 ctermbg=8
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#111111 ctermbg=8
-
 set backspace=indent,start,eol " added eol
 
 behave xterm
@@ -78,6 +69,18 @@ color desert256
 "let g:zenburn_high_Contrast = 1
 "let g:zenburn_old_Visual = 1
 "color zenburn
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+
+""Set 1c guide
+"let g:indent_guides_color_change_percent = 2
+"let g:indent_guides_start_level = 2
+"let g:indent_guides_guide_size = 1
+
+""Moved to colorscheme
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#080808 ctermbg=232
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#121212 ctermbg=233
 
 if has("gui_running")
     set guioptions=cmgtT

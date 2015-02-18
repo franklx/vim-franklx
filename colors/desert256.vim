@@ -120,3 +120,6 @@ hi Visual guifg=#8bc21d guibg=#f0e474 guisp=#f0e474 gui=NONE ctermfg=1 ctermbg=2
 hi VisualNOS guifg=NONE guibg=NONE guisp=NONE gui=bold,underline ctermfg=NONE ctermbg=NONE cterm=bold,underline
 hi WarningMsg guifg=#ff6b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
 hi WildMenu guifg=#343434 guibg=#807973 guisp=#807973 gui=NONE ctermfg=236 ctermbg=8 cterm=NONE
+" Indent guides
+hi IndentGuidesOdd  guibg=#080808 ctermbg=232
+hi IndentGuidesEven guibg=#121212 ctermbg=233
