@@ -40,6 +40,10 @@ Plugin 'gkz/vim-ls' " coffee replacement
 "Plugin 'vim-coffee-script' " CRAP
 Plugin 'mustache/vim-mustache-handlebars'
 
+if has("python")
+    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
+endif
+
 if has("unix")
     Plugin 'guns/xterm-color-table.vim'
 endif
@@ -87,7 +91,7 @@ if has("gui_running")
     "set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cANSI
     set guifont=Inconsolata_for_Powerline:h13:cANSI
     "set guifont=Fantasque_Sans_Mono:h13:cANSI
-    set printfont=Anka/Coder:h8:cANSI
+    set printfont=Inconsolata_for_Powerline:h9:cANSI
     set guioptions-=T
     set selectmode=mouse
     set mouse=a
@@ -213,16 +217,7 @@ set laststatus=2
 "set digraph   " M<BS>X = insert sharp
 ":digraphs     " Ctrl-K MX = insert sharp
 
-if has("win32")
-    let pwl_path = "C:/Users/franco/Dropbox/Run/python/2.7/Lib/site-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/plugin/powerline.vim"
-else
-    let g:Powerline_symbols = "fancy"
-    let pwl_path = "/opt/flxwf/lib/powerline/powerline/bindings/vim/plugin/powerline.vim"
-endif
-if filereadable(pwl_path)
-    autocmd BufReadPre //* let g:powerline_loaded = 1
-    autocmd BufReadPre * execute 'source ' pwl_path
-endif
+"let g:Powerline_symbols = "fancy"
 
 "######################## TODO ########################
 
