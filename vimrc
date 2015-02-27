@@ -20,6 +20,8 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 " Misc
 Plugin 'DirDiff.vim'
 Plugin 'TaskList.vim'
