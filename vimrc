@@ -26,6 +26,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'DirDiff.vim'
 Plugin 'TaskList.vim'
 Plugin 'aaronbieber/vim-vault'
+" Go
+Plugin 'fatih/vim-go'
 " Python
 Plugin 'hdima/python-syntax'
 Plugin 'tshirtman/vim-cython'
