@@ -28,6 +28,8 @@ Plugin 'TaskList.vim'
 Plugin 'aaronbieber/vim-vault'
 " Go
 Plugin 'fatih/vim-go'
+" Nimrod
+Plugin 'zah/nimrod.vim'
 " Python
 Plugin 'hdima/python-syntax'
 Plugin 'tshirtman/vim-cython'
@@ -93,8 +95,8 @@ let g:indent_guides_auto_colors = 0
 if has("gui_running")
     set guioptions=cmgtT
     "set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cANSI
-    set guifont=Inconsolata_for_Powerline:h13:cANSI
-    "set guifont=Fantasque_Sans_Mono:h13:cANSI
+    "set guifont=Inconsolata_for_Powerline:h13:cANSI
+    set guifont=Fantasque_Sans_Mono:h12:cANSI
     set printfont=Inconsolata_for_Powerline:h9:cANSI
     set guioptions-=T
     set selectmode=mouse
