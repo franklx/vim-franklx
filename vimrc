@@ -220,6 +220,8 @@ let ctrlp_clear_cache_on_exit = 1
 
 set laststatus=2
 
+map <leader>TL <Plug>TaskList
+
 "set digraph   " M<BS>X = insert sharp
 ":digraphs     " Ctrl-K MX = insert sharp
 
