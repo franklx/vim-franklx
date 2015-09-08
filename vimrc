@@ -34,7 +34,7 @@ Plugin 'zah/nimrod.vim'
 Plugin 'hdima/python-syntax'
 Plugin 'tshirtman/vim-cython'
 " Haskell
-Plugin 'haskell.vim'
+Plugin 'dag/vim2hs'
 " Web
 Plugin 'sukima/xmledit'
 Plugin 'Glench/Vim-Jinja2-Syntax'
