@@ -34,6 +34,7 @@ Plugin 'zah/nimrod.vim'
 Plugin 'hdima/python-syntax'
 Plugin 'tshirtman/vim-cython'
 " Haskell
+Plugin 'shougo/vimproc.vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'Twinside/vim-hoogle'
 Plugin 'eagletmt/ghcmod-vim'
