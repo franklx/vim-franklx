@@ -47,7 +47,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'atsepkov/vim-rapydscript'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'groenewege/vim-less'
-Plugin 'gkz/vim-ls' " coffee replacement
+Plugin 'franklx/vim-ls' " coffee replacement
 " Web Additional
 "Plugin 'vim-coffee-script' " CRAP
 Plugin 'mustache/vim-mustache-handlebars'
