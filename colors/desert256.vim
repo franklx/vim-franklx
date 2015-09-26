@@ -59,7 +59,7 @@ hi Ignore guifg=#9a8a9a guibg=NONE guisp=NONE gui=NONE ctermfg=247 ctermbg=NONE 
 hi Include guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
 hi IncSearch guifg=#86a5c4 guibg=#f0e474 guisp=#f0e474 gui=NONE ctermfg=110 ctermbg=228 cterm=NONE
 hi Keyword guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
-hi Label guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
+hi Label guifg=#f0e770 guibg=NONE guisp=NONE gui=NONE ctermfg=228 ctermbg=NONE cterm=NONE
 hi lcursor guifg=#8c8b8c guibg=#87ffe9 guisp=#87ffe9 gui=NONE ctermfg=245 ctermbg=122 cterm=NONE
 hi LineNr guifg=#b4aba2 guibg=NONE guisp=NONE gui=NONE ctermfg=138 ctermbg=NONE cterm=NONE
 "hi LocalVariable -- no settings --
