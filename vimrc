@@ -52,9 +52,15 @@ Plugin 'franklx/vim-ls' " coffee replacement
 "Plugin 'vim-coffee-script' " CRAP
 Plugin 'mustache/vim-mustache-handlebars'
 
-if has("python")
-    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
-endif
+"if has("python")
+"    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
+"endif
+
+Plugin 'bling/vim-airline'
+let g:airline_powerline_fonts=1
+"let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme="bubblegum"
+let g:airline_section_z="%3p%% %{g:airline_symbols.linenr}%#__accent_bold#%4l%#__restore__#:%3c%V"
 
 if has("unix")
     Plugin 'guns/xterm-color-table.vim'
