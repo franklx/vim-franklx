@@ -107,7 +107,7 @@ hi TabLineSel guifg=#ffefbf guibg=#3f727f guisp=#3f323f gui=NONE ctermfg=255 cte
 hi Tag guifg=#ffd493 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi taglisttagname guifg=#e089ff guibg=NONE guisp=NONE gui=NONE ctermfg=177 ctermbg=NONE cterm=NONE
 hi Title guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
-hi Todo guifg=#99131b guibg=#eeeed6 guisp=#eeeed6 gui=NONE ctermfg=224 ctermbg=230 cterm=NONE
+hi Todo guifg=#87ffff guibg=#af0000 guisp=NONE gui=italic ctermfg=123 ctermbg=124 cterm=NONE
 hi Typedef guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
 hi Type guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
 hi Underlined guifg=#f4daf4 guibg=NONE guisp=NONE gui=underline ctermfg=225 ctermbg=NONE cterm=underline
