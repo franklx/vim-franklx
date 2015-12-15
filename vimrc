@@ -95,6 +95,13 @@ color desert256
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 
+let g:haskell_indent_if = 4
+let g:haskell_indent_case = 4
+let g:haskell_indent_let = 4
+let g:haskell_indent_where = 4
+let g:haskell_indent_do = 4
+let g:haskell_indent_in = 4
+
 ""Set 1c guide
 "let g:indent_guides_color_change_percent = 2
 "let g:indent_guides_start_level = 2
@@ -108,7 +115,7 @@ if has("gui_running")
     set guioptions=cmgtT
     "set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cANSI
     "set guifont=Inconsolata_for_Powerline:h13:cANSI
-    set guifont=Fantasque_Sans_Mono:h12:cANSI
+    set guifont=Fantasque_Sans_Mono:h13:cANSI
     set printfont=Inconsolata_for_Powerline:h9:cANSI
     set guioptions-=T
     set selectmode=mouse
