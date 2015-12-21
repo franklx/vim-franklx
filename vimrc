@@ -35,6 +35,8 @@ Plugin 'hdima/python-syntax'
 Plugin 'tshirtman/vim-cython'
 " Haskell
 Plugin 'shougo/vimproc.vim'
+" Python3 with haskell syntax
+Plugin 'rubik/vim-dg'
 "Plugin 'franklx/vim2hs'
 Plugin 'franklx/haskell-vim'
 Plugin 'Twinside/vim-hoogle'
