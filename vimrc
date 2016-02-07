@@ -26,6 +26,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'DirDiff.vim'
 Plugin 'TaskList.vim'
 Plugin 'aaronbieber/vim-vault'
+Plugin 'Shougo/vimshell.vim'
+Plugin 'lilydjwg/colorizer'
 " Go
 Plugin 'fatih/vim-go'
 " Nimrod
