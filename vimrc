@@ -28,6 +28,7 @@ Plugin 'TaskList.vim'
 Plugin 'aaronbieber/vim-vault'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'lilydjwg/colorizer'
+Plugin 'majutsushi/tagbar'
 " Go
 Plugin 'fatih/vim-go'
 " Nimrod
@@ -43,6 +44,7 @@ Plugin 'rubik/vim-dg'
 Plugin 'franklx/haskell-vim'
 Plugin 'Twinside/vim-hoogle'
 Plugin 'eagletmt/ghcmod-vim'
+Plugin 'enomsg/vim-haskellConcealPlus'
 " Web
 Plugin 'sukima/xmledit'
 Plugin 'Glench/Vim-Jinja2-Syntax'
@@ -245,6 +247,10 @@ let ctrlp_clear_cache_on_exit = 1
 set laststatus=2
 
 map <leader>TL <Plug>TaskList
+
+au BufNewFile,BufRead *.hs map <buffer> <F1> :HoogleInfo<CR>
+au BufNewFile,BufRead *.hs map <buffer> <C-F1> :HoogleClose<CR>
+au BufNewFile,BufRead *.hs map <buffer> <S-F1> :HoogleLine<CR>
 
 "set digraph   " M<BS>X = insert sharp
 ":digraphs     " Ctrl-K MX = insert sharp
