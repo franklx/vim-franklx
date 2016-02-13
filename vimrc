@@ -44,7 +44,7 @@ Plugin 'rubik/vim-dg'
 Plugin 'franklx/haskell-vim'
 Plugin 'Twinside/vim-hoogle'
 Plugin 'eagletmt/ghcmod-vim'
-Plugin 'enomsg/vim-haskellConcealPlus'
+"Plugin 'enomsg/vim-haskellConcealPlus'
 " Web
 Plugin 'sukima/xmledit'
 Plugin 'Glench/Vim-Jinja2-Syntax'
