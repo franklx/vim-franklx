@@ -46,13 +46,13 @@ Plugin 'Twinside/vim-hoogle'
 Plugin 'eagletmt/ghcmod-vim'
 "Plugin 'enomsg/vim-haskellConcealPlus'
 " Web
+Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'sukima/xmledit'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'atsepkov/vim-rapydscript'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'groenewege/vim-less'
 Plugin 'franklx/vim-ls' " coffee replacement
 " Web Additional
 "Plugin 'vim-coffee-script' " CRAP
