@@ -58,6 +58,8 @@ Plugin 'franklx/vim-ls' " coffee replacement
 "Plugin 'vim-coffee-script' " CRAP
 Plugin 'mustache/vim-mustache-handlebars'
 
+Plugin 'raichoo/purescript-vim' " haskell-derived javascript compiler
+
 "if has("python")
 "    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 "endif
