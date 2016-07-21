@@ -254,6 +254,8 @@ au BufNewFile,BufRead *.hs map <buffer> <F1> :HoogleInfo<CR>
 au BufNewFile,BufRead *.hs map <buffer> <C-F1> :HoogleClose<CR>
 au BufNewFile,BufRead *.hs map <buffer> <S-F1> :HoogleLine<CR>
 
+au BufNewFile,BufRead *.jhtml se filetype=html | se syntax=jinja
+
 "set digraph   " M<BS>X = insert sharp
 ":digraphs     " Ctrl-K MX = insert sharp
 
@@ -304,7 +306,6 @@ au BufNewFile,BufRead *.hs map <buffer> <S-F1> :HoogleLine<CR>
 "
 "au BufNewFile,BufRead		ipfw.rules	se syntax=ipfw
 "au BufNewFile,BufRead		natd.conf	se syntax=natd
-"au BufNewFile,BufRead		*.jhtml		se syntax=jinjahtml | se filetype=jinjahtml
 "au BufNewFile,BufRead		*.html		se syntax=jinjahtml | se filetype=jinjahtml
 "au BufNewFile,BufRead		*.mkd		se syntax=mkd
 "map <C-n> :NERDTreeToggle<CR>
