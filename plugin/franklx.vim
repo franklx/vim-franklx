@@ -5,6 +5,8 @@ nnoremap <silent> <Leader>ml :call franklx#AppendModeline()<CR>
 autocmd BufNewFile *.py :call franklx#InsertPyHeader()
 autocmd BufNewFile *.py :call franklx#AppendModeline()
 
+map <silent> <leader>s :call franklx#DeleteTrailingWS()<CR>
+
 nnoremap <silent> <Leader>cr :call franklx#CryptModeline()<CR>
 autocmd BufNewFile *.pwdb se ft=yaml|:X|:call franklx#CryptModeline()
 

@@ -1,3 +1,4 @@
+" vim script
 function! franklx#InsertPyHeader()
   call append(0, ["#!/usr/bin/env python", "# -*- coding: utf-8 -*-"])
 endfunction
@@ -13,3 +14,10 @@ function! franklx#CryptModeline()
     let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
     call append(line("$"), l:modeline)
 endfunction
+
+function franklx#DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+  echo "Deleted trailing whitespaces."
+endfunc
