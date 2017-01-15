@@ -15,7 +15,7 @@ hi Boolean guifg=#fff27b guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE
 hi cformat guifg=#ff9dbf guibg=#400340 guisp=#400340 gui=NONE ctermfg=218 ctermbg=53 cterm=NONE
 hi Character guifg=#ff8686 guibg=NONE guisp=NONE gui=NONE ctermfg=210 ctermbg=NONE cterm=NONE
 "hi clear -- no settings --
-hi Comment guifg=#7ad9ff guibg=NONE guisp=NONE gui=italic ctermfg=117 ctermbg=NONE cterm=NONE
+hi Comment guifg=#7ad9ff guibg=NONE guisp=NONE gui=NONE ctermfg=117 ctermbg=NONE cterm=NONE
 hi Conditional guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
 hi Constant guifg=#ff8686 guibg=NONE guisp=NONE gui=NONE ctermfg=210 ctermbg=NONE cterm=NONE
 hi cspecialcharacter guifg=#ff9dbf guibg=#400340 guisp=#400340 gui=NONE ctermfg=218 ctermbg=53 cterm=NONE
@@ -88,7 +88,7 @@ hi Repeat guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE 
 hi Search guifg=#ffdea1 guibg=#cd7c2b guisp=#cd7c2b gui=NONE ctermfg=223 ctermbg=166 cterm=NONE
 "hi SignColumn -- no settings --
 hi SpecialChar guifg=#ffd493 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
-hi SpecialComment guifg=#ffd493 guibg=NONE guisp=NONE gui=italic ctermfg=222 ctermbg=NONE cterm=NONE
+hi SpecialComment guifg=#ffd493 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi Special guifg=#ffd493 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi SpecialKey guifg=#b7ff26 guibg=NONE guisp=NONE gui=NONE ctermfg=154 ctermbg=NONE cterm=NONE
 "hi SpellBad -- no settings --
@@ -107,7 +107,7 @@ hi TabLineSel guifg=#ffefbf guibg=#3f727f guisp=#3f323f gui=NONE ctermfg=255 cte
 hi Tag guifg=#ffd493 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi taglisttagname guifg=#e089ff guibg=NONE guisp=NONE gui=NONE ctermfg=177 ctermbg=NONE cterm=NONE
 hi Title guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
-hi Todo guifg=#87ffff guibg=#af0000 guisp=NONE gui=italic ctermfg=123 ctermbg=124 cterm=NONE
+hi Todo guifg=#87ffff guibg=#af0000 guisp=NONE gui=bold ctermfg=123 ctermbg=124 cterm=NONE
 hi Typedef guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
 hi Type guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
 hi Underlined guifg=#f4daf4 guibg=NONE guisp=NONE gui=underline ctermfg=225 ctermbg=NONE cterm=underline

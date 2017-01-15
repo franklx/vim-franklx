@@ -47,7 +47,7 @@ Plugin 'eagletmt/ghcmod-vim'
 "Plugin 'enomsg/vim-haskellConcealPlus'
 " Web
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'sukima/xmledit'
+"Plugin 'sukima/xmledit'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
