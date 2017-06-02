@@ -54,7 +54,7 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'atsepkov/vim-rapydscript'
-Plugin 'digitaltoad/vim-jade'
+Plugin 'digitaltoad/vim-pug'
 Plugin 'franklx/vim-ls' " coffee replacement
 " Web Additional
 "Plugin 'vim-coffee-script' " CRAP
