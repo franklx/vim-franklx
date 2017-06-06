@@ -47,6 +47,8 @@ Plugin 'alx741/vim-yesod'
 "Plugin 'enomsg/vim-haskellConcealPlus'
 " Python3 with haskell syntax
 Plugin 'rubik/vim-dg'
+" Functional PL compiling to python
+Plugin 'manicmaniac/coconut.vim'
 " Web
 Plugin 'cakebaker/scss-syntax.vim'
 "Plugin 'sukima/xmledit'
