@@ -61,6 +61,8 @@ Plugin 'franklx/vim-ls' " coffee replacement
 " Web Additional
 "Plugin 'vim-coffee-script' " CRAP
 Plugin 'mustache/vim-mustache-handlebars'
+" Powershell
+Plugin 'PProvost/vim-ps1'
 
 Plugin 'raichoo/purescript-vim' " haskell-derived javascript compiler
 
@@ -128,8 +130,9 @@ if has("gui_running")
     set guioptions=cmgtT
     "set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cANSI
     "set guifont=Inconsolata_for_Powerline:h13:cANSI
-    set guifont=Fantasque_Sans_Mono:h13:cANSI
-    set printfont=Inconsolata_for_Powerline:h9:cANSI
+    "set guifont=Fantasque_Sans_Mono:h13:cANSI
+    set guifont=Iosevka_Expanded_Term:h12
+    set printfont=Iosevka_Expanded_Term:h12
     set guioptions-=T
     set selectmode=mouse
     set mouse=a
