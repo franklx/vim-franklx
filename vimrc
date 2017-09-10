@@ -29,6 +29,8 @@ Plugin 'aaronbieber/vim-vault'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'lilydjwg/colorizer'
 Plugin 'majutsushi/tagbar'
+Plugin 'sirver/ultisnips'
+Plugin 'godlygeek/tabular'
 " Go
 Plugin 'fatih/vim-go'
 " Nimrod
@@ -38,8 +40,8 @@ Plugin 'hdima/python-syntax'
 Plugin 'tshirtman/vim-cython'
 " Haskell
 Plugin 'shougo/vimproc.vim'
-"Plugin 'franklx/vim2hs'
-Plugin 'franklx/haskell-vim'
+"Plugin 'franklx/haskell-vim'
+Plugin 'franklx/vim2hs'
 Plugin 'Twinside/vim-hoogle'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'pbrisbin/vim-syntax-shakespeare'
@@ -106,6 +108,26 @@ color desert256
 "let g:zenburn_high_Contrast = 1
 "let g:zenburn_old_Visual = 1
 "color zenburn
+
+let g:haskell_conceal       = 0
+let g:haskell_conceal_bad   = 0
+let g:haskell_conceal_wide  = 0
+let g:haskell_cpp           = 1
+let g:haskell_ffi           = 1
+let g:haskell_fold          = 1
+let g:haskell_haddock       = 1
+let g:haskell_hsp           = 0
+let g:haskell_interpolation = 1
+let g:haskell_jmacro        = 0
+let g:haskell_json          = 1
+let g:haskell_quasi         = 1
+let g:haskell_regex         = 1
+let g:haskell_rlangqq       = 0
+let g:haskell_shqq          = 0
+let g:haskell_sql           = 1
+let g:haskell_tabular       = 1
+let g:haskell_th            = 1
+let g:haskell_xml           = 1
 
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
