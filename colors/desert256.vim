@@ -30,7 +30,7 @@ hi cursorim guifg=#8c8b8c guibg=#e987ff guisp=#e987ff gui=NONE ctermfg=245 cterm
 "hi CursorLine -- no settings --
 hi Debug guifg=#ffd493 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 "hi DefinedName -- no settings --
-hi Define guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
+hi Define guifg=#8996a8 guibg=NONE guisp=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
 hi Delimiter guifg=#ffd493 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi DiffAdd guifg=NONE guibg=#004000 guisp=#acacc0 gui=NONE ctermfg=NONE ctermbg=7 cterm=NONE
 hi DiffChange guifg=NONE guibg=#000040 guisp=#c0acc0 gui=NONE ctermfg=NONE ctermbg=7 cterm=NONE
@@ -56,14 +56,14 @@ hi Folded guifg=#fffbe5 guibg=#4d454d guisp=#4d454d gui=NONE ctermfg=230 ctermbg
 hi Function guifg=#81ff81 guibg=NONE guisp=NONE gui=NONE ctermfg=120 ctermbg=NONE cterm=NONE
 hi Identifier guifg=#50b050 guibg=NONE guisp=NONE gui=NONE ctermfg=119 ctermbg=NONE cterm=NONE
 hi Ignore guifg=#9a8a9a guibg=NONE guisp=NONE gui=NONE ctermfg=247 ctermbg=NONE cterm=NONE
-hi Include guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
+hi Include guifg=#8996a8 guibg=NONE guisp=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
 hi IncSearch guifg=#86a5c4 guibg=#f0e474 guisp=#f0e474 gui=NONE ctermfg=110 ctermbg=228 cterm=NONE
 hi Keyword guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
 hi Label guifg=#f0e770 guibg=NONE guisp=NONE gui=NONE ctermfg=228 ctermbg=NONE cterm=NONE
 hi lcursor guifg=#8c8b8c guibg=#87ffe9 guisp=#87ffe9 gui=NONE ctermfg=245 ctermbg=122 cterm=NONE
 hi LineNr guifg=#b4aba2 guibg=NONE guisp=NONE gui=NONE ctermfg=138 ctermbg=NONE cterm=NONE
 "hi LocalVariable -- no settings --
-hi Macro guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
+hi Macro guifg=#8996a8 guibg=NONE guisp=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
 "hi MatchParen -- no settings --
 hi mbechanged guifg=#ffffff guibg=#3f313f guisp=#3f313f gui=NONE ctermfg=15 ctermbg=237 cterm=NONE
 hi mbenormal guifg=#eeffd5 guibg=#3f313f guisp=#3f313f gui=NONE ctermfg=230 ctermbg=237 cterm=NONE
@@ -81,8 +81,8 @@ hi PMenu guifg=#ffe4ff guibg=#4b5258 guisp=#4b5258 gui=NONE ctermfg=225 ctermbg=
 hi PMenuSbar guifg=NONE guibg=#767f88 guisp=#767f88 gui=NONE ctermfg=NONE ctermbg=60 cterm=NONE
 hi PMenuSel guifg=#84ff84 guibg=#858e98 guisp=#858e98 gui=NONE ctermfg=120 ctermbg=246 cterm=NONE
 hi PMenuThumb guifg=NONE guibg=#807973 guisp=#807973 gui=NONE ctermfg=NONE ctermbg=8 cterm=NONE
-hi PreCondit guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
-hi PreProc guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
+hi PreCondit guifg=#8996a8 guibg=NONE guisp=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
+hi PreProc guifg=#8996a8 guibg=NONE guisp=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
 hi Question guifg=#e5fff2 guibg=NONE guisp=NONE gui=NONE ctermfg=194 ctermbg=NONE cterm=NONE
 hi Repeat guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
 hi Search guifg=#ffdea1 guibg=#cd7c2b guisp=#cd7c2b gui=NONE ctermfg=223 ctermbg=166 cterm=NONE
@@ -109,7 +109,7 @@ hi taglisttagname guifg=#e089ff guibg=NONE guisp=NONE gui=NONE ctermfg=177 cterm
 hi Title guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
 hi Todo guifg=#87ffff guibg=#af0000 guisp=NONE gui=bold ctermfg=123 ctermbg=124 cterm=NONE
 hi Typedef guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
-hi Type guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
+hi Type guifg=#ff5b5b guibg=NONE guisp=NONE gui=bold ctermfg=203 ctermbg=NONE cterm=bold
 hi Underlined guifg=#f4daf4 guibg=NONE guisp=NONE gui=underline ctermfg=225 ctermbg=NONE cterm=underline
 hi underline guifg=#ffafff guibg=NONE guisp=NONE gui=NONE ctermfg=219 ctermbg=NONE cterm=NONE
 "hi Union -- no settings --
