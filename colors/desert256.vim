@@ -109,7 +109,7 @@ hi taglisttagname guifg=#e089ff guibg=NONE guisp=NONE gui=NONE ctermfg=177 cterm
 hi Title guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE
 hi Todo guifg=#87ffff guibg=#af0000 guisp=NONE gui=bold ctermfg=123 ctermbg=124 cterm=NONE
 hi Typedef guifg=#f0e770 guibg=NONE guisp=NONE gui=bold ctermfg=228 ctermbg=NONE cterm=bold
-hi Type guifg=#ff5b5b guibg=NONE guisp=NONE gui=bold ctermfg=203 ctermbg=NONE cterm=bold
+hi Type guifg=#ff5b5b guibg=NONE guisp=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=bold
 hi Underlined guifg=#f4daf4 guibg=NONE guisp=NONE gui=underline ctermfg=225 ctermbg=NONE cterm=underline
 hi underline guifg=#ffafff guibg=NONE guisp=NONE gui=NONE ctermfg=219 ctermbg=NONE cterm=NONE
 "hi Union -- no settings --

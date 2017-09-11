@@ -109,13 +109,10 @@ color desert256
 "let g:zenburn_old_Visual = 1
 "color zenburn
 
-let g:haskell_conceal       = 0
-let g:haskell_conceal_bad   = 0
-let g:haskell_conceal_wide  = 0
 let g:haskell_cpp           = 1
 let g:haskell_ffi           = 1
 let g:haskell_fold          = 1
-let g:haskell_haddock       = 1
+let g:haskell_haddock       = 0
 let g:haskell_hsp           = 0
 let g:haskell_interpolation = 1
 let g:haskell_jmacro        = 0
