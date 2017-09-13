@@ -29,7 +29,6 @@ Plugin 'aaronbieber/vim-vault'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'lilydjwg/colorizer'
 Plugin 'majutsushi/tagbar'
-Plugin 'sirver/ultisnips'
 Plugin 'godlygeek/tabular'
 " Go
 Plugin 'fatih/vim-go'
