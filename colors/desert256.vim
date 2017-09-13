@@ -19,8 +19,8 @@ hi LineNr         guifg=#b4aba2 guibg=NONE    guisp=NONE    gui=NONE      ctermf
 hi Cursor         guifg=#000000 guibg=#7ef076 guisp=#7ef076 gui=NONE      ctermfg=NONE ctermbg=120  cterm=NONE
 hi CursorIM       guifg=#000000 guibg=#e987ff guisp=#e987ff gui=NONE      ctermfg=NONE ctermbg=177  cterm=NONE
 hi lCursor        guifg=#000000 guibg=#87ffe9 guisp=#87ffe9 gui=NONE      ctermfg=NONE ctermbg=122  cterm=NONE
-hi Search         guifg=NONE    guibg=#5f5f87 guisp=#5f5f87 gui=NONE      ctermfg=NONE ctermbg=60   cterm=NONE
-hi IncSearch      guifg=NONE    guibg=#875f5f guisp=#875f5f gui=NONE      ctermfg=NONE ctermbg=95   cterm=NONE
+hi Search         guifg=#ffff00 guibg=#d78700 guisp=#ffff00 gui=NONE      ctermfg=11   ctermbg=172  cterm=NONE
+hi IncSearch      guifg=#ffffff guibg=#d78700 guisp=#ffffff gui=NONE      ctermfg=231  ctermbg=172  cterm=NONE
 hi Visual         guifg=NONE    guibg=#5f5f5f guisp=#5f5f5f gui=NONE      ctermfg=NONE ctermbg=59   cterm=NONE
 
 hi FoldColumn     guifg=#ffd787 guibg=#4d454d guisp=#4d454d gui=NONE      ctermfg=222  ctermbg=239  cterm=NONE
@@ -82,16 +82,16 @@ hi IndentGuidesEven             guibg=#121212                                   
 "hi Tooltip
 
 """ Common Colors
-hi Statement      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Conditional    guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Exception      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Repeat         guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Operator       guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Delimiter      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Structure      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Keyword        guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
-hi StorageClass   guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Typedef        guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Statement      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
+hi Conditional    guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
+hi Exception      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
+hi Repeat         guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
+hi Operator       guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
+hi Delimiter      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
+hi Structure      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
+hi Keyword        guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
+hi StorageClass   guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
+hi Typedef        guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=bold
 
 hi Type           guifg=#ff5f5f guibg=NONE    guisp=NONE    gui=NONE      ctermfg=203  ctermbg=NONE cterm=NONE
 
@@ -110,7 +110,7 @@ hi Boolean        guifg=#ff8787 guibg=NONE    guisp=NONE    gui=NONE      ctermf
 hi String         guifg=#ff8700 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=208  ctermbg=NONE cterm=NONE
 
 hi Comment        guifg=#87d7ff guibg=NONE    guisp=NONE    gui=NONE      ctermfg=117  ctermbg=NONE cterm=NONE
-hi Todo           guifg=#87ffff guibg=#af0000 guisp=NONE    gui=bold      ctermfg=123  ctermbg=124  cterm=NONE
+hi Todo           guifg=#87ffff guibg=#af0000 guisp=NONE    gui=bold      ctermfg=123  ctermbg=124  cterm=bold
 
 hi Function       guifg=#87ff87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=120  ctermbg=NONE cterm=NONE
 hi Identifier     guifg=#5faf5f guibg=NONE    guisp=NONE    gui=NONE      ctermfg=71   ctermbg=NONE cterm=NONE
