@@ -82,16 +82,16 @@ hi IndentGuidesEven             guibg=#121212                                   
 "hi Tooltip
 
 """ Common Colors
-hi Statement      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Conditional    guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Exception      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Repeat         guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Operator       guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Delimiter      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Structure      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Keyword        guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
-hi StorageClass   guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
-hi Typedef        guifg=#f0e770 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Statement      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Conditional    guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Exception      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Repeat         guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Operator       guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Delimiter      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Structure      guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Keyword        guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi StorageClass   guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
+hi Typedef        guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermfg=227  ctermbg=NONE cterm=NONE
 
 hi Type           guifg=#ff5f5f guibg=NONE    guisp=NONE    gui=NONE      ctermfg=203  ctermbg=NONE cterm=NONE
 
@@ -114,7 +114,7 @@ hi Todo           guifg=#87ffff guibg=#af0000 guisp=NONE    gui=bold      ctermf
 
 hi Function       guifg=#87ff87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=120  ctermbg=NONE cterm=NONE
 hi Identifier     guifg=#5faf5f guibg=NONE    guisp=NONE    gui=NONE      ctermfg=71   ctermbg=NONE cterm=NONE
-hi Label          guifg=#00afaf guibg=NONE    guisp=NONE    gui=NONE      ctermfg=73   ctermbg=NONE cterm=NONE
+hi Label          guifg=#ffd700 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=220  ctermbg=NONE cterm=NONE
 
 hi Debug          guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=222  ctermbg=NONE cterm=NONE
 hi Special        guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=222  ctermbg=NONE cterm=NONE
