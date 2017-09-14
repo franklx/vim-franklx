@@ -122,6 +122,11 @@ hi SpecialChar    guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermf
 hi SpecialComment guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=222  ctermbg=NONE cterm=NONE
 hi Tag            guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=222  ctermbg=NONE cterm=NONE
 
+" Preprocessor, HTML doctype #afafff
+" Preprocessor pragma #afd7ff
+" Tag attribute, format string placeholder #ffd75f
+" CSS Unit #ffaf87
+
 hi Error          guifg=#ffd787 guibg=#ff0000 guisp=#ff0000 gui=bold      ctermfg=222  ctermbg=196  cterm=bold
 hi Ignore         guifg=#9a8a9a guibg=NONE    guisp=NONE    gui=NONE      ctermfg=247  ctermbg=NONE cterm=NONE
 hi User1          guifg=#ffffff guibg=#543f5e guisp=#543f5e gui=NONE      ctermfg=15   ctermbg=59   cterm=NONE
@@ -142,3 +147,6 @@ hi doxygenSpecialOnelineDesc   guifg=#9bfa0e guibg=NONE    guisp=NONE    gui=NON
 
 hi perlSpecialMatch            guifg=#ff9dbf guibg=#400340 guisp=#400340 gui=NONE ctermfg=218 ctermbg=53   cterm=NONE
 hi perlSpecialString           guifg=#ff9dbf guibg=#400340 guisp=#400340 gui=NONE ctermfg=218 ctermbg=53   cterm=NONE
+
+hi pythonSelf                  guifg=#ffd7d7 guibg=NONE    guisp=NONE    gui=NONE ctermfg=224 ctermbg=NONE cterm=NONE
+hi pythonParam                 guifg=#d7af87 guibg=NONE    guisp=NONE    gui=NONE ctermfg=180 ctermbg=NONE cterm=NONE

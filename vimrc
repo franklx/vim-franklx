@@ -35,7 +35,7 @@ Plugin 'fatih/vim-go'
 " Nimrod
 Plugin 'zah/nimrod.vim'
 " Python
-Plugin 'hdima/python-syntax'
+Plugin 'franklx/python-syntax'
 Plugin 'tshirtman/vim-cython'
 " Haskell
 Plugin 'shougo/vimproc.vim'
@@ -155,7 +155,7 @@ if has("gui_running")
     set selectmode=mouse
     set mouse=a
     if has("win32")
-        set renderoptions=type:directx,taamode:1,contrast:1,geom:0
+        set renderoptions=type:directx,taamode:2,geom:1
     endif
 endif
 
@@ -261,7 +261,7 @@ autocmd! bufwritepost .vimrc source %
 
 autocmd FileType python setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with formatoptions=roq foldmethod=indent
 let python_highlight_all = 1
-let python_version_2 = 1
+"let python_version_2 = 1
 
 "autocmd FileType html,htmldjango,htmljinja let b:closetag_html_style=1
 "autocmd FileType html,xhtml,xml,htmldjango,htmljinja source ~/.vim/scripts/closetag.vim
