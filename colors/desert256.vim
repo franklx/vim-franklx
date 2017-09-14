@@ -95,11 +95,11 @@ hi Typedef        guifg=#f0e770 guibg=NONE    guisp=NONE    gui=bold      ctermf
 
 hi Type           guifg=#ff5f5f guibg=NONE    guisp=NONE    gui=NONE      ctermfg=203  ctermbg=NONE cterm=NONE
 
-hi Define         guifg=#8787ff guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
-hi PreCondit      guifg=#8787ff guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
-hi PreProc        guifg=#8787ff guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
-hi Include        guifg=#8787ff guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
-hi Macro          guifg=#8787ff guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
+hi Define         guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
+hi PreCondit      guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
+hi PreProc        guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
+hi Include        guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
+hi Macro          guifg=#ffd787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=105  ctermbg=NONE cterm=NONE
 
 hi Character      guifg=#ff8787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=211  ctermbg=NONE cterm=NONE
 hi Constant       guifg=#ff8787 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=211  ctermbg=NONE cterm=NONE
