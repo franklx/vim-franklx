@@ -64,6 +64,8 @@ Plugin 'franklx/vim-ls' " coffee replacement
 Plugin 'mustache/vim-mustache-handlebars'
 " Powershell
 Plugin 'PProvost/vim-ps1'
+" F#
+Plugin 'fsharp/vim-fsharp'
 
 Plugin 'raichoo/purescript-vim' " haskell-derived javascript compiler
 
