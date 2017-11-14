@@ -137,6 +137,8 @@ let g:haskell_indent_where = 4
 let g:haskell_indent_do = 4
 let g:haskell_indent_in = 4
 
+let g:go_version_warning = 0
+
 ""Set 1c guide
 "let g:indent_guides_color_change_percent = 2
 "let g:indent_guides_start_level = 2
