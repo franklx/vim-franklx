@@ -158,6 +158,9 @@ if has("gui_running")
     set guioptions-=T
     set selectmode=mouse
     set mouse=a
+    if has("unix")
+        set guifont=Iosevka\ Expanded\ Term\ 12
+    endif
     if has("win32")
         set renderoptions=type:directx,taamode:2,geom:1
     endif
