@@ -213,7 +213,9 @@ vnoremap <C-n> :nohl<CR>
 inoremap <C-n> :nohl<CR>
 
 set nowrap
-set esckeys
+if !has("nvim")
+    set esckeys
+endif
 
 set showcmd
 
@@ -234,7 +236,7 @@ set noerrorbells
 set vb t_vb=
 
 " Better modes.  Remeber where we are, support yankring
-set viminfo=!,'100,\"100,:20,<50,s10,h,n~/.viminfo
+set viminfo=!,'100,\"100,:20,<50,s10,h
 
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
