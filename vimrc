@@ -69,6 +69,8 @@ Plugin 'fsharp/vim-fsharp'
 
 Plugin 'raichoo/purescript-vim' " haskell-derived javascript compiler
 
+Plugin 'salpalvv/vim-gluon'
+
 "if has("python")
 "    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 "endif
@@ -185,7 +187,7 @@ set wildmenu
 set wildignore=*.dll,*.o,*.pyc,*.bak,*.exe,*.jpg,*.jpeg,*.png,*.gif,*$py.class,*.class,*.db
 set wildmode=list:full
 
-set smartindent
+set nosmartindent
 set nocindent
 inoremap # #
 " ???
