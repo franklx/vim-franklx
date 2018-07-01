@@ -178,7 +178,7 @@ autocmd BufEnter * :syntax sync fromstart
 " Remember cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-set title
+set notitle
 set ruler
 set ttyfast
 "set cursorline
@@ -285,6 +285,12 @@ let ctrlp_clear_cache_on_exit = 1
 set laststatus=2
 
 map <leader>TL <Plug>TaskList
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 au BufNewFile,BufRead *.hs map <buffer> <F1> :HoogleInfo<CR>
 au BufNewFile,BufRead *.hs map <buffer> <C-F1> :HoogleClose<CR>
