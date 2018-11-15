@@ -58,7 +58,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'atsepkov/vim-rapydscript'
 Plugin 'digitaltoad/vim-pug'
-Plugin 'franklx/vim-ls' " coffee replacement
+Plugin 'franklx/vim-ls'
+Plugin 'franklx/vim-vue'
 " Web Additional
 "Plugin 'vim-coffee-script' " CRAP
 Plugin 'mustache/vim-mustache-handlebars'
@@ -188,7 +189,7 @@ set wildignore=*.dll,*.o,*.pyc,*.bak,*.exe,*.jpg,*.jpeg,*.png,*.gif,*$py.class,*
 set wildmode=list:full
 
 set nosmartindent
-set nocindent
+set cindent
 inoremap # #
 " ???
 "inoremap # X#
@@ -270,7 +271,7 @@ autocmd! bufwritepost .vimrc source %
 "set showcmd
 "set number
 
-autocmd FileType python setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with formatoptions=roq foldmethod=indent
+autocmd FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class,with formatoptions=roq foldmethod=indent
 let python_highlight_all = 1
 "let python_version_2 = 1
 
