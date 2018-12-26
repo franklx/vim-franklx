@@ -32,8 +32,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 " Go
 Plugin 'fatih/vim-go'
-" Nimrod
-Plugin 'zah/nimrod.vim'
+" Nim
+Plugin 'zah/nim.vim'
 " Python
 Plugin 'franklx/python-syntax'
 Plugin 'tshirtman/vim-cython'
@@ -67,10 +67,14 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'PProvost/vim-ps1'
 " F#
 Plugin 'fsharp/vim-fsharp'
-
-Plugin 'raichoo/purescript-vim' " haskell-derived javascript compiler
-
+" Haskell-derived javascript compiler
+Plugin 'raichoo/purescript-vim'
+" Haskell-inspired scripting language
 Plugin 'salpalvv/vim-gluon'
+" Kotlin (better syntax for java)
+Plugin 'udalov/kotlin-vim'
+" Haskell dialect for JVM
+Plugin 'melrief/vim-frege-syntax'
 
 "if has("python")
 "    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
