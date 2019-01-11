@@ -183,7 +183,6 @@ autocmd BufEnter * :syntax sync fromstart
 " Remember cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-set notitle
 set ruler
 set ttyfast
 "set cursorline
