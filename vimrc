@@ -75,6 +75,12 @@ Plugin 'salpalvv/vim-gluon'
 Plugin 'udalov/kotlin-vim'
 " Haskell dialect for JVM
 Plugin 'melrief/vim-frege-syntax'
+" Typescript
+Plugin 'HerringtonDarkholme/yats.vim'
+" Python-like language for the web (awesome!)
+Plugin 'M4R7iNP/vim-imba'
+" Kotlin velocity templates
+Plugin 'lepture/vim-velocity'
 
 "if has("python")
 "    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
