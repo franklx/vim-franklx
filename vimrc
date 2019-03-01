@@ -4,13 +4,13 @@ filetype off
 if has("win32")
     language C
     let $LANG='en'
-    set runtimepath+=~/Dropbox/Settings/Vim
-    set runtimepath+=~/Dropbox/Settings/Vim/bundle/Vundle.vim
-    call vundle#begin('~/Dropbox/Settings/Vim/bundle')
-else
-    set runtimepath+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
+    "set runtimepath+=~/Dropbox/Settings/Vim
+    "set runtimepath+=~/Dropbox/Settings/Vim/bundle/Vundle.vim
+    "call vundle#begin('~/Dropbox/Settings/Vim/bundle')
 endif
+
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 " Base
