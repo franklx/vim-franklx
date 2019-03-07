@@ -60,6 +60,7 @@ Plugin 'atsepkov/vim-rapydscript'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'franklx/vim-ls'
 Plugin 'franklx/vim-vue'
+Plugin 'isRuslan/vim-es6'
 " Web Additional
 "Plugin 'vim-coffee-script' " CRAP
 Plugin 'mustache/vim-mustache-handlebars'
