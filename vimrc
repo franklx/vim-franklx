@@ -76,6 +76,8 @@ Plugin 'salpalvv/vim-gluon'
 Plugin 'udalov/kotlin-vim'
 " Haskell dialect for JVM
 Plugin 'melrief/vim-frege-syntax'
+" Julia
+Plugin 'JuliaEditorSupport/julia-vim'
 " Typescript
 Plugin 'HerringtonDarkholme/yats.vim'
 " Python-like language for the web (awesome!)
