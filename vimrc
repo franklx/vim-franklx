@@ -84,6 +84,10 @@ Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'M4R7iNP/vim-imba'
 " Kotlin velocity templates
 Plugin 'lepture/vim-velocity'
+" TOML config file format
+Plugin 'cespare/vim-toml'
+" OpenHUB
+Plugin 'cyberkov/openhab-vim'
 
 "if has("python")
 "    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
