@@ -56,13 +56,13 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'atsepkov/vim-rapydscript'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'franklx/vim-ls'
 Plugin 'franklx/vim-vue'
 Plugin 'isRuslan/vim-es6'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'rossjrw/vim-coffee-script'
 " Web Additional
-"Plugin 'vim-coffee-script' " CRAP
 Plugin 'mustache/vim-mustache-handlebars'
 " Powershell
 Plugin 'PProvost/vim-ps1'
