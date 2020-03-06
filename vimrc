@@ -31,7 +31,9 @@ Plugin 'lilydjwg/colorizer'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 " Go
+if v:version >= 800
 Plugin 'fatih/vim-go'
+endif
 " Nim
 Plugin 'zah/nim.vim'
 " Python
