@@ -86,9 +86,10 @@ Plugin 'M4R7iNP/vim-imba'
 Plugin 'lepture/vim-velocity'
 " TOML config file format
 Plugin 'cespare/vim-toml'
-" OpenHUB
+" OpenHAB
 Plugin 'cyberkov/openhab-vim'
-
+" Svelte
+Plugin 'evanleck/vim-svelte'
 "if has("python")
 "    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 "endif
