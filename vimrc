@@ -63,6 +63,7 @@ Plugin 'franklx/vim-ls'
 Plugin 'franklx/vim-vue'
 Plugin 'isRuslan/vim-es6'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'rossjrw/vim-coffee-script'
 " Web Additional
 Plugin 'mustache/vim-mustache-handlebars'
