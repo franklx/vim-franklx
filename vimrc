@@ -93,6 +93,8 @@ Plugin 'cespare/vim-toml'
 Plugin 'cyberkov/openhab-vim'
 " Svelte
 Plugin 'evanleck/vim-svelte'
+" JSX (react etc)
+Plugin 'MaxMEllon/vim-jsx-pretty'
 "if has("python")
 "    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 "endif
