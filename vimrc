@@ -179,13 +179,13 @@ if has("gui_running")
     "set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cANSI
     "set guifont=Inconsolata_for_Powerline:h13:cANSI
     "set guifont=Fantasque_Sans_Mono:h13:cANSI
-    set guifont=Iosevka_Expanded_Term:h12
-    set printfont=Iosevka_Expanded_Term:h12
+    set guifont=Iosevka_Term_Custom:h12
+    set printfont=Iosevka_Term_Custom:h12
     set guioptions-=T
     set selectmode=mouse
     set mouse=a
     if has("unix")
-        set guifont=Iosevka\ Expanded\ Term\ 12
+        set guifont=Iosevka\ Term\ Custom\ 12
     endif
     if has("win32")
         set renderoptions=type:directx,taamode:2,geom:1
