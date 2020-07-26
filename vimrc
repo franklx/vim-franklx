@@ -13,6 +13,7 @@ set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
 " Base
 Plugin 'franklx/vim-franklx'
 Plugin 'ctrlp.vim'
@@ -22,6 +23,10 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+"   Airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " Misc
 Plugin 'DirDiff.vim'
 Plugin 'TaskList.vim'
@@ -30,85 +35,82 @@ Plugin 'Shougo/vimshell.vim'
 Plugin 'lilydjwg/colorizer'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
-" Go
-if v:version >= 800
-Plugin 'fatih/vim-go'
+if has("unix")
+Plugin 'guns/xterm-color-table.vim'
 endif
+
 " Nim
 Plugin 'zah/nim.vim'
+
 " Python
 Plugin 'franklx/python-syntax'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'tshirtman/vim-cython'
+Plugin 'manicmaniac/coconut.vim'
+
 " Haskell
 Plugin 'shougo/vimproc.vim'
-"Plugin 'franklx/haskell-vim'
 Plugin 'franklx/vim2hs'
 Plugin 'Twinside/vim-hoogle'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'pbrisbin/vim-syntax-shakespeare'
 Plugin 'alx741/vim-yesod'
+"Plugin 'franklx/haskell-vim'
 "Plugin 'enomsg/vim-haskellConcealPlus'
-" Python3 with haskell syntax
-Plugin 'rubik/vim-dg'
-" Functional PL compiling to python
-Plugin 'manicmaniac/coconut.vim'
-" Web
-Plugin 'cakebaker/scss-syntax.vim'
-"Plugin 'sukima/xmledit'
-Plugin 'Glench/Vim-Jinja2-Syntax'
+
+" Javascript and friends
 Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'franklx/vim-ls'
-Plugin 'franklx/vim-vue'
 Plugin 'isRuslan/vim-es6'
+Plugin 'othree/javascript-libraries-syntax.vim'
+"   Typescript
 Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'HerringtonDarkholme/yats.vim'
+"   Coffeescript
 Plugin 'rossjrw/vim-coffee-script'
-" Web Additional
+"   Livescript
+Plugin 'franklx/vim-ls'
+
+" Web
+Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'digitaltoad/vim-pug'
+"   Vue
+Plugin 'franklx/vim-vue'
+"   JSX (react etc)
+Plugin 'MaxMEllon/vim-jsx-pretty'
+"   Svelte
+Plugin 'evanleck/vim-svelte'
+
 " Powershell
 Plugin 'PProvost/vim-ps1'
+
 " F#
 Plugin 'fsharp/vim-fsharp'
-" Haskell-derived javascript compiler
-Plugin 'raichoo/purescript-vim'
-" Haskell-inspired scripting language
-Plugin 'salpalvv/vim-gluon'
-" Kotlin (better syntax for java)
+
+" Kotlin
 Plugin 'udalov/kotlin-vim'
-" Haskell dialect for JVM
-Plugin 'melrief/vim-frege-syntax'
+"   Velocity templates
+Plugin 'lepture/vim-velocity'
+
 " Julia
 Plugin 'JuliaEditorSupport/julia-vim'
-" Typescript
-Plugin 'HerringtonDarkholme/yats.vim'
-" Python-like language for the web (awesome!)
-Plugin 'M4R7iNP/vim-imba'
-" Kotlin velocity templates
-Plugin 'lepture/vim-velocity'
+
 " TOML config file format
 Plugin 'cespare/vim-toml'
+
 " OpenHAB
 Plugin 'cyberkov/openhab-vim'
-" Svelte
-Plugin 'evanleck/vim-svelte'
-" JSX (react etc)
-Plugin 'MaxMEllon/vim-jsx-pretty'
-"if has("python")
-"    Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
-"endif
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-let g:airline_powerline_fonts=1
-"let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme="bubblegum"
-let g:airline_section_z="%3p%% %{g:airline_symbols.linenr}%#__accent_bold#%4l%#__restore__#:%3c%V"
-
-if has("unix")
-    Plugin 'guns/xterm-color-table.vim'
+" Go
+if v:version >= 800
+Plugin 'fatih/vim-go'
 endif
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme           = "bubblegum"
+let g:airline_section_z       = "%3p%% %{g:airline_symbols.linenr}%#__accent_bold#%4l%#__restore__#:%3c%V"
+"let g:airline#extensions#tabline#enabled = 1
 
 " Other
 "Plugin 'wavded/vim-stylus'
@@ -117,6 +119,10 @@ endif
 "Plugin 'derekwyatt/vim-scala'
 "Plugin 'farfanoide/vim-kivy'
 "Plugin 'plasticboy/vim-markdown'
+"Plugin 'raichoo/purescript-vim'
+"Plugin 'M4R7iNP/vim-imba'
+"Plugin 'melrief/vim-frege-syntax'
+"Plugin 'salpalvv/vim-gluon'
 
 call vundle#end()
 filetype plugin indent on
@@ -130,11 +136,6 @@ set mousemodel=popup
 
 syntax on
 color desert256
-
-"let g:zenburn_transparent = 1
-"let g:zenburn_high_Contrast = 1
-"let g:zenburn_old_Visual = 1
-"color zenburn
 
 let g:haskell_cpp           = 1
 let g:haskell_ffi           = 1
@@ -156,14 +157,14 @@ let g:haskell_xml           = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 
-let g:haskell_indent_if = 4
-let g:haskell_indent_case = 4
-let g:haskell_indent_let = 4
+let g:haskell_indent_if    = 4
+let g:haskell_indent_case  = 4
+let g:haskell_indent_let   = 4
 let g:haskell_indent_where = 4
-let g:haskell_indent_do = 4
-let g:haskell_indent_in = 4
+let g:haskell_indent_do    = 4
+let g:haskell_indent_in    = 4
 
-let g:go_version_warning = 0
+let g:go_version_warning   = 0
 
 ""Set 1c guide
 "let g:indent_guides_color_change_percent = 2
@@ -190,11 +191,10 @@ if has("gui_running")
     if has("win32")
         set renderoptions=type:directx,taamode:2,geom:1
     endif
-endif
-
-if has("gui_macvim")
-    set guifont=DejaVu_Sans_Mono:h12
-    set anti
+    if has("gui_macvim")
+        set guifont=DejaVu_Sans_Mono:h12
+        set anti
+    endif
 endif
 
 " do syntax highlight syncing from start
@@ -309,11 +309,9 @@ set laststatus=2
 
 map <leader>TL <Plug>TaskList
 
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
-
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
+nmap <leader>ea <Plug>(EasyAlign)
+xmap <leader>ea <Plug>(EasyAlign)
 
 au BufNewFile,BufRead *.hs map <buffer> <F1> :HoogleInfo<CR>
 au BufNewFile,BufRead *.hs map <buffer> <C-F1> :HoogleClose<CR>
