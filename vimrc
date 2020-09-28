@@ -80,7 +80,8 @@ Plugin 'franklx/vim-vue'
 "   JSX (react etc)
 Plugin 'MaxMEllon/vim-jsx-pretty'
 "   Svelte
-Plugin 'evanleck/vim-svelte'
+""Plugin 'evanleck/vim-svelte'
+Plugin 'leafOfTree/vim-svelte-plugin'
 
 " Powershell
 Plugin 'PProvost/vim-ps1'
@@ -166,6 +167,11 @@ let g:haskell_indent_in    = 4
 
 let g:go_version_warning   = 0
 
+let g:vim_svelte_plugin_use_pug         = 1
+let g:vim_svelte_plugin_use_typescript  = 1
+let g:vim_svelte_plugin_use_sass        = 1
+let g:vim_svelte_plugin_has_init_indent = 1
+
 ""Set 1c guide
 "let g:indent_guides_color_change_percent = 2
 "let g:indent_guides_start_level = 2
@@ -180,13 +186,13 @@ if has("gui_running")
     "set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cANSI
     "set guifont=Inconsolata_for_Powerline:h13:cANSI
     "set guifont=Fantasque_Sans_Mono:h13:cANSI
-    set guifont=Iosevka_Term_Custom:h12
-    set printfont=Iosevka_Term_Custom:h12
+    set guifont=Iosevka_Term_Custom:h11
+    set printfont=Iosevka_Term_Custom:h11
     set guioptions-=T
     set selectmode=mouse
     set mouse=a
     if has("unix")
-        set guifont=Iosevka\ Term\ Custom\ 12
+        set guifont=Iosevka\ Term\ Custom\ 11
     endif
     if has("win32")
         set renderoptions=type:directx,taamode:2,geom:1
@@ -227,6 +233,7 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
+set shiftwidth=4
 
 " Better Search
 set hlsearch
@@ -299,6 +306,8 @@ let python_highlight_all = 1
 
 "autocmd FileType html,htmldjango,htmljinja let b:closetag_html_style=1
 "autocmd FileType html,xhtml,xml,htmldjango,htmljinja source ~/.vim/scripts/closetag.vim
+
+autocmd FileType svelte set smarttab< tabstop< softtabstop< shiftwidth< shiftround< expandtab< shiftwidth<
 
 let javascript_enable_domhtmlcss=1
 "let g:closetag_default_xml=1
