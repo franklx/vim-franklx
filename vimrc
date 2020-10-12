@@ -55,8 +55,6 @@ Plugin 'Twinside/vim-hoogle'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'pbrisbin/vim-syntax-shakespeare'
 Plugin 'alx741/vim-yesod'
-"Plugin 'franklx/haskell-vim'
-"Plugin 'enomsg/vim-haskellConcealPlus'
 
 " Javascript and friends
 Plugin 'pangloss/vim-javascript'
@@ -102,6 +100,9 @@ Plugin 'cespare/vim-toml'
 
 " OpenHAB
 Plugin 'cyberkov/openhab-vim'
+
+" Rust
+Plugin 'rust-lang/rust.vim'
 
 " Go
 if v:version >= 800
