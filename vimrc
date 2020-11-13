@@ -6,108 +6,195 @@ if has("win32")
     let $LANG='en'
     "set runtimepath+=~/Dropbox/Settings/Vim
     "set runtimepath+=~/Dropbox/Settings/Vim/bundle/Vundle.vim
-    "call vundle#begin('~/Dropbox/Settings/Vim/bundle')
 endif
 
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Install vim-plug
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Base
-Plugin 'franklx/vim-franklx'
-Plugin 'ctrlp.vim'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'rking/ag.vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
+Plug 'franklx/vim-franklx'
+Plug 'vim-scripts/ctrlp.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 "   Airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Misc
-Plugin 'DirDiff.vim'
-Plugin 'TaskList.vim'
-Plugin 'aaronbieber/vim-vault'
-Plugin 'Shougo/vimshell.vim'
-Plugin 'lilydjwg/colorizer'
-Plugin 'majutsushi/tagbar'
-Plugin 'godlygeek/tabular'
+Plug 'vim-scripts/DirDiff.vim'
+Plug 'vim-scripts/TaskList.vim'
+Plug 'aaronbieber/vim-vault'
+Plug 'Shougo/vimshell.vim'
+Plug 'lilydjwg/colorizer'
+Plug 'majutsushi/tagbar'
+Plug 'godlygeek/tabular'
 if has("unix")
-Plugin 'guns/xterm-color-table.vim'
+Plug 'guns/xterm-color-table.vim'
 endif
 
 " Nim
-Plugin 'zah/nim.vim'
+Plug 'zah/nim.vim'
 
 " Python
-Plugin 'franklx/python-syntax'
-Plugin 'Glench/Vim-Jinja2-Syntax'
-Plugin 'tshirtman/vim-cython'
-Plugin 'manicmaniac/coconut.vim'
+Plug 'franklx/python-syntax'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'tshirtman/vim-cython'
+Plug 'manicmaniac/coconut.vim'
 
 " Haskell
-Plugin 'shougo/vimproc.vim'
-Plugin 'franklx/vim2hs'
-Plugin 'Twinside/vim-hoogle'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'pbrisbin/vim-syntax-shakespeare'
-Plugin 'alx741/vim-yesod'
+Plug 'shougo/vimproc.vim'
+Plug 'franklx/vim2hs'
+Plug 'Twinside/vim-hoogle'
+Plug 'eagletmt/ghcmod-vim'
+Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'alx741/vim-yesod'
+"Plug 'franklx/haskell-vim'
+"Plug 'enomsg/vim-haskellConcealPlus'
 
 " Javascript and friends
-Plugin 'pangloss/vim-javascript'
-Plugin 'isRuslan/vim-es6'
-Plugin 'othree/javascript-libraries-syntax.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'isRuslan/vim-es6'
+Plug 'othree/javascript-libraries-syntax.vim'
 "   Typescript
-Plugin 'leafgarland/typescript-vim'
-Plugin 'peitalin/vim-jsx-typescript'
-Plugin 'HerringtonDarkholme/yats.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'HerringtonDarkholme/yats.vim'
 "   Coffeescript
-Plugin 'rossjrw/vim-coffee-script'
+Plug 'rossjrw/vim-coffee-script'
 "   Livescript
-Plugin 'franklx/vim-ls'
+Plug 'franklx/vim-ls'
 
 " Web
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'digitaltoad/vim-pug'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'digitaltoad/vim-pug'
 "   Vue
-Plugin 'franklx/vim-vue'
+Plug 'franklx/vim-vue'
 "   JSX (react etc)
-Plugin 'MaxMEllon/vim-jsx-pretty'
+Plug 'MaxMEllon/vim-jsx-pretty'
 "   Svelte
-""Plugin 'evanleck/vim-svelte'
-Plugin 'leafOfTree/vim-svelte-plugin'
+Plug 'evanleck/vim-svelte'
 
 " Powershell
-Plugin 'PProvost/vim-ps1'
+Plug 'PProvost/vim-ps1'
 
 " F#
-Plugin 'fsharp/vim-fsharp'
+Plug 'fsharp/vim-fsharp'
 
 " Kotlin
-Plugin 'udalov/kotlin-vim'
+Plug 'udalov/kotlin-vim'
 "   Velocity templates
-Plugin 'lepture/vim-velocity'
+Plug 'lepture/vim-velocity'
 
 " Julia
-Plugin 'JuliaEditorSupport/julia-vim'
+Plug 'JuliaEditorSupport/julia-vim'
 
 " TOML config file format
-Plugin 'cespare/vim-toml'
+Plug 'cespare/vim-toml'
 
 " OpenHAB
-Plugin 'cyberkov/openhab-vim'
-
-" Rust
-Plugin 'rust-lang/rust.vim'
+Plug 'cyberkov/openhab-vim'
 
 " Go
 if v:version >= 800
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go'
 endif
+
+" Rust
+Plug 'rust-lang/rust.vim'
+
+" Tools
+Plug 'vim-syntastic/syntastic'
+
+Plug 'prabirshrestha/asyncomplete.vim'
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+imap <c-space> <Plug>(asyncomplete_force_refresh)
+
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+" pip install python-language-server
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'pyls',
+                \ 'cmd': {server_info->['pyls']},
+                \ 'allowlist': ['python'],
+                \ })
+endif
+
+" rustup component add rls rust-analysis rust-src
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'rls',
+                \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+                \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
+                \ 'whitelist': ['rust'],
+                \ })
+endif
+
+" npm install -g typescript typescript-language-server
+if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'javascript support using typescript-language-server',
+                \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+                \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+                \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact'],
+                \ })
+endif
+
+" npm install --global vscode-html-languageserver-bin
+if executable('html-languageserver')                         
+    au User lsp_setup call lsp#register_server({               
+                \ 'name': 'html-languageserver',                     
+                \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},                                   
+                \ 'whitelist': ['html'],                             
+                \ })                                                       
+endif                   
+
+" npm install -g vscode-css-languageserver-bin
+if executable('css-languageserver')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'css-languageserver',
+                \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
+                \ 'whitelist': ['css', 'less', 'sass'],
+                \ })
+endif
+
+" npm install vls -g
+if executable('css-languageserver')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'vls',
+                \ 'cmd': {server_info->[&shell, &shellcmdflag, 'vls --stdio']},
+                \ 'whitelist': ['vue'],
+                \ })
+endif
+
+" go get -u golang.org/x/tools/gopls
+if executable('gopls')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'gopls',
+                \ 'cmd': {server_info->['gopls']},
+                \ 'whitelist': ['go'],
+                \ })
+    autocmd BufWritePre *.go LspDocumentFormatSync
+endif
+
+Plug 'prabirshrestha/asyncomplete-file.vim'
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+    \ 'name': 'file',
+    \ 'allowlist': ['*'],
+    \ 'priority': 10,
+    \ 'completor': function('asyncomplete#sources#file#completor')
+    \ }))
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme           = "bubblegum"
@@ -115,18 +202,18 @@ let g:airline_section_z       = "%3p%% %{g:airline_symbols.linenr}%#__accent_bol
 "let g:airline#extensions#tabline#enabled = 1
 
 " Other
-"Plugin 'wavded/vim-stylus'
-"Plugin 'oplatek/Conque-Shell'
-"Plugin 'bernh/pss.vim'
-"Plugin 'derekwyatt/vim-scala'
-"Plugin 'farfanoide/vim-kivy'
-"Plugin 'plasticboy/vim-markdown'
-"Plugin 'raichoo/purescript-vim'
-"Plugin 'M4R7iNP/vim-imba'
-"Plugin 'melrief/vim-frege-syntax'
-"Plugin 'salpalvv/vim-gluon'
+"Plug 'wavded/vim-stylus'
+"Plug 'oplatek/Conque-Shell'
+"Plug 'bernh/pss.vim'
+"Plug 'derekwyatt/vim-scala'
+"Plug 'farfanoide/vim-kivy'
+"Plug 'plasticboy/vim-markdown'
+"Plug 'raichoo/purescript-vim'
+"Plug 'M4R7iNP/vim-imba'
+"Plug 'melrief/vim-frege-syntax'
+"Plug 'salpalvv/vim-gluon'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 let g:pymode_virtualenv = 0
@@ -168,11 +255,6 @@ let g:haskell_indent_in    = 4
 
 let g:go_version_warning   = 0
 
-let g:vim_svelte_plugin_use_pug         = 1
-let g:vim_svelte_plugin_use_typescript  = 1
-let g:vim_svelte_plugin_use_sass        = 1
-let g:vim_svelte_plugin_has_init_indent = 1
-
 ""Set 1c guide
 "let g:indent_guides_color_change_percent = 2
 "let g:indent_guides_start_level = 2
@@ -187,13 +269,13 @@ if has("gui_running")
     "set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cANSI
     "set guifont=Inconsolata_for_Powerline:h13:cANSI
     "set guifont=Fantasque_Sans_Mono:h13:cANSI
-    set guifont=Iosevka_Term_Custom:h11
-    set printfont=Iosevka_Term_Custom:h11
+    set guifont=Iosevka_Term_Custom:h12
+    set printfont=Iosevka_Term_Custom:h12
     set guioptions-=T
     set selectmode=mouse
     set mouse=a
     if has("unix")
-        set guifont=Iosevka\ Term\ Custom\ 11
+        set guifont=Iosevka\ Term\ Custom\ 12
     endif
     if has("win32")
         set renderoptions=type:directx,taamode:2,geom:1
@@ -202,6 +284,10 @@ if has("gui_running")
         set guifont=DejaVu_Sans_Mono:h12
         set anti
     endif
+endif
+
+if exists('g:neovide')
+    set guifont=Iosevka\ Custom\:h16
 endif
 
 " do syntax highlight syncing from start
@@ -234,7 +320,6 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
-set shiftwidth=4
 
 " Better Search
 set hlsearch
