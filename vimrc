@@ -111,7 +111,7 @@ Plug 'rust-lang/rust.vim'
 
 " Tools
 Plug 'vim-syntastic/syntastic'
-
+Plug 'justinmk/vim-dirvish'
 Plug 'prabirshrestha/asyncomplete.vim'
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -377,6 +377,16 @@ map <c-h> <c-w>h
 " Automatic reloading of .vimrc
 autocmd! bufwritepost vimrc source %
 autocmd! bufwritepost .vimrc source %
+
+"let g:netrw_banner = 0
+"let g:netrw_liststyle = 3
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+"let g:netrw_winsize = 25
+"augroup ProjectDrawer
+"  autocmd!
+"  autocmd VimEnter * :Vexplore
+"augroup END
 
 " Make the command line two lines high and change the statusline display to
 " something that looks useful.
