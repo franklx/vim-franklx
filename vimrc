@@ -287,7 +287,7 @@ if has("gui_running")
 endif
 
 if exists('g:neovide')
-    set guifont=Iosevka\ Custom\:h16
+    set guifont=Iosevka\ Custom\:h18
 endif
 
 " do syntax highlight syncing from start
@@ -329,6 +329,10 @@ set incsearch
 noremap <C-n> :nohl<CR>
 vnoremap <C-n> :nohl<CR>
 inoremap <C-n> :nohl<CR>
+
+noremap <Leader>x "+x
+noremap <Leader>y "+y
+noremap <Leader>p "+gP
 
 set nowrap
 if !has("nvim")
