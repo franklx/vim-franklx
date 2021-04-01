@@ -131,15 +131,15 @@ if executable('pyls')
                 \ })
 endif
 
-" rustup component add rls rust-analysis rust-src
-if executable('rls')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'rls',
-                \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
-                \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
-                \ 'whitelist': ['rust'],
-                \ })
-endif
+"" rustup component add rls rust-analysis rust-src
+"if executable('rls')
+"    au User lsp_setup call lsp#register_server({
+"                \ 'name': 'rls',
+"                \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+"                \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
+"                \ 'whitelist': ['rust'],
+"                \ })
+"endif
 
 " npm install -g typescript typescript-language-server
 if executable('typescript-language-server')
@@ -275,7 +275,7 @@ if has("gui_running")
     set selectmode=mouse
     set mouse=a
     if has("unix")
-        set guifont=Iosevka\ Term\ Custom\ 12
+        set guifont=Iosevka\ Term\ Custom\ 11
     endif
     if has("win32")
         set renderoptions=type:directx,taamode:2,geom:1
