@@ -66,7 +66,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'HerringtonDarkholme/yats.vim'
 "   Coffeescript
-Plug 'rossjrw/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 "   Livescript
 Plug 'franklx/vim-ls'
 
@@ -113,6 +113,10 @@ Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'justinmk/vim-dirvish'
 Plug 'prabirshrestha/asyncomplete.vim'
+
+" PostgreSQL
+Plug 'lifepillar/pgsql.vim'
+
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
@@ -199,6 +203,8 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
 let g:airline_powerline_fonts = 1
 let g:airline_theme           = "bubblegum"
 let g:airline_section_z       = "%3p%% %{g:airline_symbols.linenr}%#__accent_bold#%4l%#__restore__#:%3c%V"
+let g:airline_left_sep        = "\uE0B4"
+let g:airline_right_sep       = "\uE0B6"
 "let g:airline#extensions#tabline#enabled = 1
 
 " Other
@@ -287,7 +293,7 @@ if has("gui_running")
 endif
 
 if exists('g:neovide')
-    set guifont=Iosevka\ Custom\:h18
+    set guifont=Iosevka\ Custom\:h11
 endif
 
 " do syntax highlight syncing from start
@@ -427,6 +433,8 @@ au BufNewFile,BufRead *.hs map <buffer> <C-F1> :HoogleClose<CR>
 au BufNewFile,BufRead *.hs map <buffer> <S-F1> :HoogleLine<CR>
 
 au BufNewFile,BufRead *.jhtml se filetype=html | se syntax=jinja
+
+au BufNewFile,BufRead /dev/shm/** setlocal noswapfile nobackup noundofile
 
 "set digraph   " M<BS>X = insert sharp
 ":digraphs     " Ctrl-K MX = insert sharp
