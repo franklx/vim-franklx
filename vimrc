@@ -117,6 +117,10 @@ Plug 'prabirshrestha/asyncomplete.vim'
 " PostgreSQL
 Plug 'lifepillar/pgsql.vim'
 
+" Project Explorer
+Plug 'scrooloose/nerdtree'
+"Plug 'ryanoasis/vim-devicons'
+
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
@@ -218,9 +222,25 @@ let g:airline_right_sep       = "\uE0B6"
 "Plug 'M4R7iNP/vim-imba'
 "Plug 'melrief/vim-frege-syntax'
 "Plug 'salpalvv/vim-gluon'
+"
+
+" NerdTree
+let g:NERDTreeShowHidden = 1
+"let g:NERDTreeMinimalUI = 0
+let g:NERDTreeIgnore = ['node_modules']
+"let NERDTreeStatusline='NERDTree'
+" File explorer plugin
+map <C-b> :NERDTreeToggle<CR>
+" nerd commenter
+noremap <C-/> :NERDCommenterComment<CR>
+
+""" " Intellisense and code completion with syntax highlighting
+""" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+""" let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', ...]
 
 call plug#end()
 filetype plugin indent on
+filetype plugin on
 
 let g:pymode_virtualenv = 0
 
@@ -300,6 +320,8 @@ endif
 autocmd BufEnter * :syntax sync fromstart
 " Remember cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) | execute 'cd '.argv()[0] | endif
 
 set ruler
 set ttyfast
@@ -488,6 +510,3 @@ au BufNewFile,BufRead /dev/shm/** setlocal noswapfile nobackup noundofile
 "au BufNewFile,BufRead		natd.conf	se syntax=natd
 "au BufNewFile,BufRead		*.html		se syntax=jinjahtml | se filetype=jinjahtml
 "au BufNewFile,BufRead		*.mkd		se syntax=mkd
-"map <C-n> :NERDTreeToggle<CR>
-"let g:NERDTreeDirArrows=0
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
