@@ -15,11 +15,11 @@ call plug#begin('~/.vim/plugged')
 
 " Base
 Plug 'franklx/vim-franklx'
-Plug 'vim-scripts/ctrlp.vim'
+"Plug 'vim-scripts/ctrlp.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'rking/ag.vim'
+"Plug 'rking/ag.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 "   Airline
@@ -34,6 +34,7 @@ Plug 'Shougo/vimshell.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'majutsushi/tagbar'
 Plug 'godlygeek/tabular'
+
 if has("unix")
 Plug 'guns/xterm-color-table.vim'
 endif
@@ -116,6 +117,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " PostgreSQL
 Plug 'lifepillar/pgsql.vim'
 
+" Fuzzy Finder
+Plug 'dbakker/vim-projectroot'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 " Project Explorer
 Plug 'scrooloose/nerdtree'
 "Plug 'ryanoasis/vim-devicons'
@@ -146,8 +152,7 @@ let g:airline_right_sep       = "\uE0B6"
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI  = 1
 let g:NERDTreeIgnore     = ['node_modules']
-map <C-b> :NERDTreeToggle<CR>
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) | execute 'cd '.argv()[0] | endif
+"autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) | execute 'cd '.argv()[0] | endif
 
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
@@ -260,6 +265,9 @@ map <leader>TL <Plug>TaskList
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap <leader>ea <Plug>(EasyAlign)
 xmap <leader>ea <Plug>(EasyAlign)
+vmap <Enter> <Plug>(EasyAlign)
+
+map <C-b> :ProjectRootExe NERDTreeToggle<CR>
 
 autocmd FileType svelte set smarttab< tabstop< softtabstop< shiftwidth< shiftround< expandtab< shiftwidth<
 
