@@ -169,6 +169,8 @@ let ctrlp_clear_cache_on_exit = 1
 "let g:indent_guides_start_level = 2
 "let g:indent_guides_guide_size = 1
 
+let g:coc_disable_startup_warning = 1
+
 syntax on
 behave xterm
 color desert256
