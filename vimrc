@@ -46,7 +46,6 @@ Plug 'zah/nim.vim'
 Plug 'franklx/python-syntax'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'tshirtman/vim-cython'
-Plug 'manicmaniac/coconut.vim'
 
 " Haskell
 Plug 'shougo/vimproc.vim'
@@ -111,8 +110,8 @@ Plug 'rust-lang/rust.vim'
 " Tools
 Plug 'justinmk/vim-dirvish'
 
-" Completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
+
 
 " PostgreSQL
 Plug 'lifepillar/pgsql.vim'
@@ -169,7 +168,14 @@ let ctrlp_clear_cache_on_exit = 1
 "let g:indent_guides_start_level = 2
 "let g:indent_guides_guide_size = 1
 
-let g:coc_disable_startup_warning = 1
+"Ale
+let g:ale_linters = {'rust': ['rustc', 'analyzer']}
+let g:ale_completion_enabled = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
+set omnifunc=ale#completion#OmniFunc
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 syntax on
 behave xterm
