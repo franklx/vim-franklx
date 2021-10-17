@@ -34,6 +34,8 @@ Plug 'Shougo/vimshell.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'majutsushi/tagbar'
 Plug 'godlygeek/tabular'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-speeddating'
 
 if has("unix")
 Plug 'guns/xterm-color-table.vim'
@@ -59,6 +61,7 @@ Plug 'alx741/vim-yesod'
 Plug 'pangloss/vim-javascript'
 Plug 'isRuslan/vim-es6'
 Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'tpope/vim-jdaddy'
 "   Typescript
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -71,9 +74,13 @@ Plug 'franklx/vim-ls'
 " Web
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'digitaltoad/vim-pug'
+"   Write HTML quickly
+Plug 'mattn/emmet-vim'
 "   Vue
-Plug 'franklx/vim-vue'
+"Plug 'posva/vim-vue'
+Plug 'storyn26383/vim-vue'
 "   JSX (react etc)
 Plug 'MaxMEllon/vim-jsx-pretty'
 "   Svelte
@@ -87,6 +94,7 @@ Plug 'fsharp/vim-fsharp'
 
 " Kotlin
 Plug 'udalov/kotlin-vim'
+
 "   Velocity templates
 Plug 'lepture/vim-velocity'
 
@@ -110,8 +118,8 @@ Plug 'rust-lang/rust.vim'
 " Tools
 Plug 'justinmk/vim-dirvish'
 
+" Completion
 Plug 'dense-analysis/ale'
-
 
 " PostgreSQL
 Plug 'lifepillar/pgsql.vim'
@@ -207,6 +215,17 @@ set expandtab
 " Better Search
 set hlsearch
 set incsearch
+" use double-Esc to completely clear the search buffer
+nnoremap <silent> <Esc><Esc> :let @/ = ""<CR>
+" use space to retain the search buffer and toggle highlighting off/on
+nnoremap <silent> <Space> :set hlsearch!<CR>
+
+" delete comment character when joining commented lines
+set formatoptions+=j
+" recognize numbered list
+set formatoptions+=n
+" use indent of second line of paragraph
+set formatoptions+=2
 
 set nowrap
 if !has("nvim")
@@ -221,7 +240,10 @@ set scrolloff=5
 " load modelines from files
 set modeline
 
-runtime macros/matchit.vim
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
 
 " utf-8 default encoding
 set enc=utf-8
@@ -240,19 +262,14 @@ set viminfo=!,'100,\"100,:20,<50,s10,h
 set pastetoggle=<F2>
 set clipboard=unnamed
 
-" Disable stupid backup and swap files - they trigger too many events
-" for file system watchers
+" Disable stupid backup and swap files
 set nobackup
 set nowritebackup
 set noswapfile
 
-" Removes highlight of your last search
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
-
 inoremap # #
 
+" Quick system clipboard access
 noremap <Leader>x "+x
 noremap <Leader>y "+y
 noremap <Leader>p "+gP
