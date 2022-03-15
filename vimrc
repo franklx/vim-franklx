@@ -45,7 +45,7 @@ endif
 Plug 'zah/nim.vim'
 
 " Python
-Plug 'franklx/python-syntax'
+Plug 'vim-python/python-syntax'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'tshirtman/vim-cython'
 
@@ -227,6 +227,8 @@ set formatoptions+=n
 " use indent of second line of paragraph
 set formatoptions+=2
 
+set redrawtime=0
+
 set nowrap
 if !has("nvim")
     set esckeys
@@ -274,11 +276,11 @@ noremap <Leader>x "+x
 noremap <Leader>y "+y
 noremap <Leader>p "+gP
 
-" bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+"" bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
+"map <c-j> <c-w>j
+"map <c-k> <c-w>k
+"map <c-l> <c-w>l
+"map <c-h> <c-w>h
 
 " tab for brackets
 nnoremap <tab> %
