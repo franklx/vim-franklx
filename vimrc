@@ -177,6 +177,7 @@ let ctrlp_clear_cache_on_exit = 1
 "let g:indent_guides_guide_size = 1
 
 "Ale
+let g:ale_enabled = 0
 let g:ale_linters = {'rust': ['rustc', 'analyzer']}
 let g:ale_completion_enabled = 1
 let g:airline#extensions#ale#enabled = 1
