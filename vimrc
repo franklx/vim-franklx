@@ -133,13 +133,17 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 "Plug 'ryanoasis/vim-devicons'
 
+" Markdown
+"Plug 'preservim/vim-markdown'
+"Plug 'rhysd/vim-gfm-syntax'
+Plug 'SidOfc/mkdx'
+
 " Other
 "Plug 'wavded/vim-stylus'
 "Plug 'oplatek/Conque-Shell'
 "Plug 'bernh/pss.vim'
 "Plug 'derekwyatt/vim-scala'
 "Plug 'farfanoide/vim-kivy'
-"Plug 'plasticboy/vim-markdown'
 "Plug 'raichoo/purescript-vim'
 "Plug 'M4R7iNP/vim-imba'
 "Plug 'melrief/vim-frege-syntax'
@@ -170,6 +174,27 @@ let javascript_enable_domhtmlcss=1
 "let g:closetag_default_xml=1
 
 let ctrlp_clear_cache_on_exit = 1
+
+let g:markdown_fenced_languages = ['javascript', 'typescript', 'python', 'rust', 'json', 'sql', 'pgsql']
+let g:mkdx#settings = {
+\   'highlight': {
+\   'enable': 1,
+\   'frontmatter': { 'yaml': 1, 'toml': 1, 'json': 0 },
+\   },
+\   'enter': { 'shift': 1 },
+\   'links': {
+\       'external': { 'enable': 0 },
+\       'conceal': 0,
+\   },
+\   'checkbox': {
+\       'toggles': [' ', '-', 'x', 'X'],
+\       'match_attrs': {
+\           'mkdxCheckboxEmpty': '',
+\           'mkdxCheckboxPending': '',
+\           'mkdxCheckboxComplete': ''
+\           }
+\       }
+\   }
 
 ""Set 1c guide
 "let g:indent_guides_color_change_percent = 2
@@ -307,7 +332,7 @@ autocmd! BufWritePost .vimrc source %
 autocmd BufEnter * :syntax sync fromstart
 " Remember cursor position
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-" 
+"
 autocmd BufNewFile,BufRead /dev/shm/** setlocal noswapfile nobackup noundofile
 
 if has("gui_running") || exists('g:neovide')
