@@ -1,12 +1,12 @@
 " vim script
 function! franklx#InsertPyHeader()
-  call append(0, ["#!/usr/bin/env python3", "# -*- coding: utf-8 -*-"])
+    call append(0, ["#!/usr/bin/env python3", "# -*- coding: utf-8 -*-"])
 endfunction
 
 function! franklx#AppendModeline()
-  let l:modeline = printf("vim: set ts=%d sts=%s sw=%d %set %ssta :", &tabstop, &softtabstop, &shiftwidth, &expandtab ? '' : 'no', &smarttab ? '' : 'no')
-  let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
-  call append(line("$"), l:modeline)
+    let l:modeline = printf("vim: set ts=%d sts=%s sw=%d %set %ssta :", &tabstop, &softtabstop, &shiftwidth, &expandtab ? '' : 'no', &smarttab ? '' : 'no')
+    let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
+    call append(line("$"), l:modeline)
 endfunction
 
 function! franklx#CryptModeline()
@@ -16,8 +16,12 @@ function! franklx#CryptModeline()
 endfunction
 
 function franklx#DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-  echo "Deleted trailing whitespaces."
+    if ( &filetype != 'markdown' ) && ( &filetype != 'markdown_tablemode' ) && ( &filetype != 'gfm' )
+        exe "normal mz"
+        %s/\s\+$//ge
+        exe "normal `z"
+        echo "Deleted trailing whitespaces."
+    else
+        echo "Delete trailing whitespaces DISABLED for markdown files."
+    endif
 endfunc
