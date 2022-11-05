@@ -114,6 +114,8 @@ endif
 
 " Rust
 Plug 'rust-lang/rust.vim'
+" Just
+Plug 'NoahTheDuke/vim-just'
 
 " Tools
 Plug 'justinmk/vim-dirvish'
