@@ -15,7 +15,6 @@ call plug#begin('~/.vim/plugged')
 
 " Base
 Plug 'franklx/vim-franklx'
-"Plug 'vim-scripts/ctrlp.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -130,7 +129,7 @@ Plug 'pantharshit00/vim-prisma'
 
 " Fuzzy Finder
 Plug 'dbakker/vim-projectroot'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Project Explorer
@@ -223,7 +222,11 @@ let g:go_version_warning   = 0
 let javascript_enable_domhtmlcss=1
 "let g:closetag_default_xml=1
 
-let ctrlp_clear_cache_on_exit = 1
+" fzf
+let g:fzf_buffers_jump = 1
+let $FZF_DEFAULT_COMMAND="rg --files --follow"
+map <silent> <C-p> :ProjectRootExe FZF<CR>
+map <silent> <C-S-p> :ProjectRootExe GFiles<CR>
 
 let g:markdown_fenced_languages = ['javascript', 'typescript', 'python', 'rust', 'json', 'sql', 'pgsql']
 let g:mkdx#settings = {
