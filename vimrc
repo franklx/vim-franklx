@@ -126,6 +126,9 @@ Plug 'dense-analysis/ale'
 " PostgreSQL
 Plug 'lifepillar/pgsql.vim'
 
+" Prisma ORM
+Plug 'pantharshit00/vim-prisma'
+
 " Fuzzy Finder
 Plug 'dbakker/vim-projectroot'
 Plug 'junegunn/fzf'
@@ -355,6 +358,6 @@ if has("gui_running") || exists('g:neovide')
         set anti
     endif
     if exists('g:neovide')
-        set guifont=Iosevka\ Custom\:h11
+        set guifont=Iosevka\ Custom\ Light:h11.5:#e-antialias:#h-none
     endif
 endif
