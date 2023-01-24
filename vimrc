@@ -32,7 +32,6 @@ Plug 'vim-scripts/TaskList.vim'
 Plug 'aaronbieber/vim-vault'
 Plug 'Shougo/vimshell.vim'
 Plug 'lilydjwg/colorizer'
-Plug 'majutsushi/tagbar'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-speeddating'
@@ -135,8 +134,11 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Project Explorer
+Plug 'zhaosheng-pan/vim-sidebar-manager'
 Plug 'scrooloose/nerdtree'
-"Plug 'ryanoasis/vim-devicons'
+Plug 'majutsushi/tagbar'
+Plug 'mbbill/undotree'
+Plug 'jeetsukumaran/vim-buffergator'
 
 " Markdown
 "Plug 'preservim/vim-markdown'
@@ -164,11 +166,54 @@ let g:airline_left_sep        = "\uE0B4"
 let g:airline_right_sep       = "\uE0B6"
 "let g:airline#extensions#tabline#enabled = 1
 
-" NerdTree
+" Sidebar
 let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI  = 1
-let g:NERDTreeIgnore     = ['node_modules']
-"autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) | execute 'cd '.argv()[0] | endif
+"let g:NERDTreeMinimalUI  = 1
+let g:NERDTreeIgnore     = ['node_modules', 'target']
+let g:NERDTreeWinPos = 'left'
+let g:NERDTreeWinSize = 40
+let g:NERDTreeQuitOnOpen = 1
+let g:tagbar_left = 1
+let g:tagbar_width = 40
+let g:tagbar_autoclose = 0
+let g:tagbar_autofocus = 1
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_SplitWidth = 40
+let g:buffergator_viewport_split_policy = 'L'
+
+let g:sidebars = {
+  \ 'nerdtree': {
+  \     'position': 'left',
+  \     'check_win': {nr -> getwinvar(nr, '&filetype') ==# 'nerdtree'},
+  \     'open': 'ProjectRootExe NERDTree',
+  \     'close': 'NERDTreeClose'
+  \ },
+  \ 'tagbar': {
+  \     'position': 'left',
+  \     'check_win': {nr -> bufname(winbufnr(nr)) =~ '__Tagbar__'},
+  \     'open': 'TagbarOpen',
+  \     'close': 'TagbarClose'
+  \ },
+  \ 'undotree': {
+  \     'position': 'left',
+  \     'check_win': {nr -> getwinvar(nr, '&filetype') ==# 'undotree'},
+  \     'open': 'UndotreeShow',
+  \     'close': 'UndotreeHide'
+  \ },
+  \ 'buffergator': {
+  \     'position': 'left',
+  \     'check_win': {nr -> bufname(winbufnr(nr)) == '[[buffergator-buffers]]'},
+  \     'open': 'BuffergatorOpen',
+  \     'close': 'BuffergatorClose'
+  \ }
+  \ }
+
+noremap <silent> <M-1> :call sidebar#toggle('nerdtree')<CR>
+noremap <silent> <M-2> :call sidebar#toggle('tagbar')<CR>
+noremap <silent> <M-3> :call sidebar#toggle('undotree')<CR>
+noremap <silent> <M-4> :call sidebar#toggle('buffergator')<CR>
+
+let g:startify_session_before_save = ['call sidebar#close_all()']
 
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
@@ -299,6 +344,9 @@ set clipboard=unnamed
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Set window title
+set title
 
 inoremap # #
 
