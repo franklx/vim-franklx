@@ -14,6 +14,3 @@ autocmd BufNewFile,BufRead *.json setlocal ft=javascript
 autocmd BufNewFile,BufRead *.kv setlocal ft=kivy
 autocmd BufNewFile,BufRead *.pyj set filetype=rapydscript
 autocmd BufNewFile,BufRead *.md :TableModeEnable
-
-inoreabbrev <expr> <bar><bar> <SID>isAtStartOfLine('\|\|') ? '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
-inoreabbrev <expr> __ <SID>isAtStartOfLine('__') ? '<c-o>:silent! TableModeDisable<cr>' : '__'
