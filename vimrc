@@ -140,7 +140,7 @@ Plug 'mbbill/undotree'
 Plug 'jeetsukumaran/vim-buffergator'
 
 " Markdown
-"Plug 'preservim/vim-markdown'
+Plug 'preservim/vim-markdown'
 "Plug 'rhysd/vim-gfm-syntax'
 Plug 'SidOfc/mkdx'
 
