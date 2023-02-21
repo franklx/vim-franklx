@@ -425,4 +425,6 @@ if has("gui_running") || exists('g:neovide')
     if exists('g:neovide')
         set guifont=Iosevka\ Custom\ Light:h11.5:#e-antialias:#h-none
     endif
+else
+    set mouse=
 endif
