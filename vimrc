@@ -21,7 +21,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 "Plug 'rking/ag.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-"   Airline
+
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -39,90 +40,61 @@ if has("unix")
 Plug 'guns/xterm-color-table.vim'
 endif
 
-" Nim
-Plug 'zah/nim.vim'
+let g:polyglot_disabled = ['exim.plugin', 'ferm.plugin']
 
-" Python
-Plug 'vim-python/python-syntax'
-Plug 'Glench/Vim-Jinja2-Syntax'
-Plug 'tshirtman/vim-cython'
+" Polyglot
+Plug 'sheerun/vim-polyglot'
 
-" Haskell
-Plug 'shougo/vimproc.vim'
-Plug 'franklx/vim2hs'
-Plug 'Twinside/vim-hoogle'
-Plug 'eagletmt/ghcmod-vim'
-Plug 'pbrisbin/vim-syntax-shakespeare'
-Plug 'alx741/vim-yesod'
+" Cython (polyglot: maybe embedded in main python syntax)
+"Plug 'tshirtman/vim-cython'
+
+" Haskell (polyglot: neovimhaskell/haskell-vim)
+"Plug 'shougo/vimproc.vim'
+"Plug 'franklx/vim2hs'
+"Plug 'Twinside/vim-hoogle'
+"Plug 'eagletmt/ghcmod-vim'
+"Plug 'pbrisbin/vim-syntax-shakespeare'
+"Plug 'alx741/vim-yesod'
 
 " Javascript and friends
-Plug 'pangloss/vim-javascript'
-Plug 'isRuslan/vim-es6'
+"Plug 'isRuslan/vim-es6'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'tpope/vim-jdaddy'
-"   Typescript
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'HerringtonDarkholme/yats.vim'
-"   Coffeescript
-Plug 'kchmck/vim-coffee-script'
-"   Livescript
-Plug 'franklx/vim-ls'
+
+" Typescript
+"Plug 'leafgarland/typescript-vim'
+"Plug 'peitalin/vim-jsx-typescript'
+"Plug 'HerringtonDarkholme/yats.vim'
+
+" Livescript (polyglot: gkz/vim-ls)
+"Plug 'franklx/vim-ls'
 
 " Web
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'digitaltoad/vim-pug'
-"   Write HTML quickly
+"Plug 'hail2u/vim-css3-syntax'
+
+" Write HTML quickly
 Plug 'mattn/emmet-vim'
-"   Vue
-"Plug 'posva/vim-vue'
-Plug 'storyn26383/vim-vue'
-"   JSX (react etc)
-Plug 'MaxMEllon/vim-jsx-pretty'
-"   Svelte
-Plug 'evanleck/vim-svelte'
 
-" Powershell
-Plug 'PProvost/vim-ps1'
+" Vue (polyglot: posva/vim-vue)
+"Plug 'storyn26383/vim-vue'
 
-" F#
-Plug 'fsharp/vim-fsharp'
+" Svelte (polyglot: leafOfTree/vim-svelte-plugin)
+"Plug 'evanleck/vim-svelte'
 
-" Kotlin
-Plug 'udalov/kotlin-vim'
-
-"   Velocity templates
-Plug 'lepture/vim-velocity'
-
-" Julia
-Plug 'JuliaEditorSupport/julia-vim'
-
-" TOML config file format
-Plug 'cespare/vim-toml'
+" F# (polyglot: ionide/Ionide-vim)
+"Plug 'fsharp/vim-fsharp'
 
 " OpenHAB
 Plug 'cyberkov/openhab-vim'
 
-" Go
-if v:version >= 800
-Plug 'fatih/vim-go'
-endif
-
-" Rust
-Plug 'rust-lang/rust.vim'
-" Just
-Plug 'NoahTheDuke/vim-just'
+" Go (polyglot: same plugin but without 'if v:version >= 800' check)
+"Plug 'fatih/vim-go'
 
 " Tools
 Plug 'justinmk/vim-dirvish'
 
 " Completion
 Plug 'dense-analysis/ale'
-
-" PostgreSQL
-Plug 'lifepillar/pgsql.vim'
 
 " Prisma ORM
 Plug 'pantharshit00/vim-prisma'
@@ -139,10 +111,10 @@ Plug 'majutsushi/tagbar'
 Plug 'mbbill/undotree'
 Plug 'jeetsukumaran/vim-buffergator'
 
-" Markdown
-Plug 'preservim/vim-markdown'
-"Plug 'rhysd/vim-gfm-syntax'
-Plug 'SidOfc/mkdx'
+" Markdown (polyglot: preservim/vim-markdown)
+"Plug 'preservim/vim-markdown'
+"Plug 'SidOfc/mkdx'
+""Plug 'rhysd/vim-gfm-syntax'
 
 " Other
 "Plug 'wavded/vim-stylus'
@@ -154,6 +126,17 @@ Plug 'SidOfc/mkdx'
 "Plug 'M4R7iNP/vim-imba'
 "Plug 'melrief/vim-frege-syntax'
 "Plug 'salpalvv/vim-gluon'
+
+" Included in vim-franklx
+" cst.vim
+" exim.vim
+" ferm.vim
+" firehol.vim
+" fsharp.vim (polyglot: ionide/ionide.vim)
+" hurl.vim
+" ipfw.vim
+" natd.vim
+" nginx.vim (polyglot: chr4/nginx.vim)
 
 "Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
