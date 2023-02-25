@@ -112,8 +112,7 @@ Plug 'mbbill/undotree'
 Plug 'jeetsukumaran/vim-buffergator'
 
 " Markdown (polyglot: preservim/vim-markdown)
-"Plug 'preservim/vim-markdown'
-"Plug 'SidOfc/mkdx'
+Plug 'SidOfc/mkdx'
 ""Plug 'rhysd/vim-gfm-syntax'
 
 " Other
@@ -225,7 +224,8 @@ let $FZF_DEFAULT_COMMAND="rg --files --follow"
 map <silent> <C-p> :ProjectRootExe FZF<CR>
 map <silent> <C-S-p> :ProjectRootExe GFiles<CR>
 
-let g:markdown_fenced_languages = ['javascript', 'typescript', 'python', 'rust', 'json', 'sql', 'pgsql']
+let g:vim_markdown_fenced_languages = ['javascript', 'typescript', 'python', 'rust', 'json', 'sql', 'pgsql']
+let g:vim_markdown_strikethrough = 1
 let g:mkdx#settings = {
 \   'highlight': {
 \   'enable': 1,
