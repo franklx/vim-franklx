@@ -15,4 +15,7 @@ autocmd BufNewFile,BufRead *.kv setlocal ft=kivy
 autocmd BufNewFile,BufRead *.pyj set filetype=rapydscript
 autocmd BufNewFile,BufRead *.md :TableModeEnable
 
-autocmd! BufNewFile,BufRead *.pug,*.html,*.tmpl,*.jhtml setlocal ft=jinja-composite
+autocmd BufNewFile,BufRead *.cgi setlocal ft=perl
+autocmd BufNewFile,BufRead *_py.cgi setlocal ft=python
+
+autocmd BufNewFile,BufRead *.pug,*.html,*.tmpl,*.jhtml setlocal ft=jinja-composite
