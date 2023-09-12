@@ -112,7 +112,7 @@ Plug 'mbbill/undotree'
 Plug 'jeetsukumaran/vim-buffergator'
 
 " Markdown (polyglot: preservim/vim-markdown)
-Plug 'SidOfc/mkdx'
+"Plug 'SidOfc/mkdx'
 ""Plug 'rhysd/vim-gfm-syntax'
 
 " Other
@@ -126,6 +126,9 @@ Plug 'SidOfc/mkdx'
 "Plug 'melrief/vim-frege-syntax'
 "Plug 'salpalvv/vim-gluon'
 
+" Rusty Object Notation
+Plug 'ron-rs/ron.vim'
+
 " Included in vim-franklx
 " cst.vim
 " exim.vim
@@ -138,6 +141,10 @@ Plug 'SidOfc/mkdx'
 " nginx.vim (polyglot: chr4/nginx.vim)
 
 "Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+
+Plug 'vim-pandoc/vim-pandoc-syntax'
+
+Plug 'subnut/nvim-ghost.nvim'
 
 call plug#end()
 
@@ -388,10 +395,13 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 "
 autocmd BufNewFile,BufRead /dev/shm/** setlocal noswapfile nobackup noundofile
 
+"augroup pandoc_syntax
+"    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+"augroup END
+
 if has("gui_running") || exists('g:neovide')
     set guioptions=cmgt
     set guifont=Iosevka_Term_Custom:h12
-    set printfont=Iosevka_Term_Custom:h12
     set selectmode=mouse
     set mouse=a
     set mousemodel=popup
@@ -406,7 +416,10 @@ if has("gui_running") || exists('g:neovide')
         set anti
     endif
     if exists('g:neovide')
-        set guifont=Iosevka\ Custom\ Light:h11.5:#e-antialias:#h-none
+        "set guifont=Iosevka\ Custom\ Light:h15:#e-antialias:#h-none
+        set guifont=Iosevka\ Custom\ Light:h12
+    else
+        set printfont=Iosevka_Term_Custom:h12
     endif
 else
     set mouse=
