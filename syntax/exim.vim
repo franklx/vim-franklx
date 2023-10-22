@@ -96,7 +96,7 @@ syn match eximInclude "^\s*.include\(_if_exists\)\?\>"
 " 6.4. Macros in the configuration file
 syn region eximMacroDefinition matchgroup=eximMacroName start="^[A-Z]\i*\s*=" end="$" skip="\\\s*$" transparent contains=TOP
 " 6.5. Conditional skips in the configuration file
-syn match eximIfThen "^\s*.\(ifdef\|ifndef\|endifdef\|elifndef\|else\|endif\)\>"
+syn match eximIfThen "^\s*.\(ifdef\|ifndef\|endifdef\|elifdef\|elifndef\|else\|endif\)\>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " 9. File and databasae lookups {{{
 syn keyword eximLookupType cdb dbm[nz] dsearch lsearch nis wildlsearch
@@ -124,9 +124,11 @@ syn keyword eximOption local_sender_retain no_local_sender_retain not_local_send
 syn keyword eximOption prod_requires_admin no_prod_requires_admin not_prod_requires_admin
 syn keyword eximOption queue_list_requires_admin no_queue_list_requires_admin not_queue_list_requires_admin
 " 13.4. Logging
-syn keyword eximOption log_file_path log_selector log_timezone syslog_facility syslog_processname
+syn keyword eximOption log_file_path log_selector log_timezone syslog_facility syslog_pid syslog_processname
+syn keyword eximOption syslog_duplication no_syslog_duplication not_syslog_duplication
 syn keyword eximOption preserve_message_logs no_preserve_message_logs not_preserve_message_logs
 syn keyword eximOption syslog_timestamp no_syslog_timestamp not_syslog_timestamp
+syn keyword eximOption write_rejectlog
 " 13.5. Frozen messages
 syn keyword eximOption auto_thaw freeze_tell timeout_frozen_after
 syn keyword eximOption move_frozen_messages no_move_frozen_messages not_move_frozen_messages
@@ -142,11 +144,11 @@ syn keyword eximOption daemon_smtp_ports local_interfaces pid_file_path
 " 13.10. Resource control
 syn keyword eximOption check_log_inodes check_log_space check_spool_inodes check_spool_space deliver_queue_load_max smtp_load_reserve queue_only_load
 " 13.11. Policy controls
-syn keyword eximOption acl_not_smtp acl_smtp_auth acl_smtp_connect acl_smtp_data acl_smtp_etrn acl_smtp_expn acl_smtp_helo acl_smtp_mail acl_smtp_mime acl_smtp_rcpt acl_smtp_starttls acl_smtp_vrfy header_maxsize header_line_maxsize helo_verify_hosts host_lookup host_reject_connection hosts_treat_as_local local_scan_timeout message_size_limit percent_hack_domains host_lookup_order helo_allow_chars
+syn keyword eximOption acl_not_smtp acl_not_smtp_mime acl_not_smtp_start acl_smtp_auth acl_smtp_connect acl_smtp_data acl_smtp_data_prdr acl_smtp_dkim acl_smtp_etrn acl_smtp_expn acl_smtp_helo acl_smtp_mail acl_smtp_mailauth acl_smtp_mime acl_smtp_notquit acl_smtp_predata acl_smtp_quit acl_smtp_rcpt acl_smtp_starttls acl_smtp_vrfy av_scanner check_rfc2047_length dns_cname_loops dns_csa_search_limit dns_csa_use_reverse header_maxsize header_line_maxsize helo_accept_junk_hosts helo_allow_chars helo_lookup_domains helo_try_verify_hosts helo_verify_hosts host_lookup host_lookup_order hosts_proxy host_reject_connection hosts_treat_as_local local_scan_timeout message_size_limit percent_hack_domains proxy_protocol_timeout spamd_address strict_acl_vars spf_smtp_comment_template
 " 13.12. Callout cache
 syn keyword eximOption callout_domain_negative_expire callout_domain_positive_expire callout_negative_expire callout_positive_expire callout_random_local_part
 " 13.13. TLS
-syn keyword eximOption tls_advertise_hosts tls_certificate tls_dhparam tls_privatekey tls_try_verify_hosts tle_verify_certificates tls_verify_hosts
+syn keyword eximOption gnutls_compat_mode gnutls_allow_auto_pkcs11 hosts_require_alpn hosts_require_helo openssl_options tls_advertise_hosts tls_alpn tls_certificate tls_crl tls_dh_max_bits tls_dhparam tls_eccurve tls_ocsp_file tls_on_connect_ports tls_privatekey tls_remember_esmtp tls_require_ciphers tls_try_verify_hosts tls_verify_certificates tls_verify_hosts 
 " 13.14. Local user handling
 syn keyword eximOption finduser_retries gecos_name gecos_pattern max_username_length unknown_login unknown_username uucp_from_pattern uucp_from_sender
 " 13.15. Incoming messages
@@ -276,6 +278,7 @@ syn keyword eximOption envelope_to_add no_envelope_to_add not_envelope_to_add
 syn keyword eximOption headers_only no_headers_only not_headers_only
 syn keyword eximOption initgroups no_initgroups not_initgroups
 syn keyword eximOption retry_use_local_part no_retry_use_local_part not_retry_use_local_part
+syn keyword eximOption rcpt_include_affixes no_rcpt_include_affixes not_rcpt_include_affixes
 syn keyword eximOption return_path_add no_return_path_add not_return_path_add
 syn keyword eximOption transport_filter_timeout
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
@@ -310,7 +313,8 @@ syn keyword eximOption return_message no_return_message not_return_message
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " 27. The lmtp transport {{{
 syn keyword eximDriverName lmtp
-syn keyword eximOption batch_id batch_max command timeout
+syn keyword eximOption batch_id batch_max command socket timeout
+syn keyword eximOption ignore_quota not_ignore_quota no_ignore_quota
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " 28. The pipe transport {{{
 syn keyword eximDriverName pipe
@@ -355,34 +359,47 @@ syn match eximRetryCondition "\s\zs\*\ze\s" contained containedin=eximRetrySecti
 " 31.3. Retry rule parameters
 syn match eximRetryLetter "\<[FG]\ze\s*," contained containedin=eximRetrySection
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
-" 32. SMTP authentication {{{
-" 32.1. Generic options for authenticators
+" 33. SMTP authentication {{{
+" 33.1. Generic options for authenticators
 syn keyword eximOption driver public_name server_advertise_condition server_debug_print server_set_id server_mail_auth_condition
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
-" 33. The plaintext authenticator {{{
+" 34. The plaintext authenticator {{{
 syn keyword eximDriverName plaintext
 syn keyword eximOption server_prompts server_condition
 syn keyword eximOption client_send
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
-" 34. The cram_md5 authenticator {{{
+" 35. The cram_md5 authenticator {{{
 syn keyword eximDriverName cram_md5
 syn keyword eximOption server_secret
 syn keyword eximOption client_name client_secret
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
-" 35. The spa authenticator {{{
+" 36. The cyrus_sasl authenticator {{{
+syn keyword eximDriverName cyrus_sasl
+syn keyword eximOption server_hostname server_mech server_realm server_service
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" 37. The dovecot authenticator {{{
+syn keyword eximDriverName dovecot
+syn keyword eximOption server_socket
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" 40. The spa authenticator {{{
 syn keyword eximDriverName spa
 syn keyword eximOption server_password
 syn keyword eximOption client_domain client_password client_username
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
-" 37. Access control lists {{{
-" 37.8. Format of an ACL
+" 44. Access control lists {{{
+" 44.8. Format of an ACL
 syn match eximACLKeyword "^\s*\(accept\|defer\|deny\|discard\|drop\|require\|warn\)\>"
-" 37.11. ACL modifiers
-syn keyword eximACLModifier control delay endpass log_message message set
-" 37.12. ACL conditions
-syn keyword eximACLCondition acl authenticated condition dnslists domains encrypted hosts local_parts recipients sender_domains senders verify
-syn keyword eximACLCondition header_sender header_syntax helo recipient reverse_host_lookup sender adderss
-syn keyword eximACLParameter callout defer_ok no_cache postmaster random no_details
+" 44.11. ACL modifiers
+syn keyword eximACLModifier add_header continue control delay endpass log_message log_reject_target logwrite message queue remove_header set udpsend
+" 44.12. ACL conditions
+syn keyword eximACLCondition acl authenticated condition decode dnslists domains encrypted hosts local_parts malware mime_regex ratelimit recipients regex seen sender_domains senders spam verify
+syn keyword eximACLCondition header_sender header_syntax helo recipient reverse_host_lookup sender
+syn keyword eximACLParameter callout defer_ok no_cache postmaster random no_details csa header_names_ascii
+" 58.1. DKIM
+syn keyword eximOption dkim_domain dkim_selector dkim_private_key dkim_hash dkim_identity dkim_canon dkim_strict dkim_sign_headers dkim_timestamps
+" 58.4. SPF
+syn keyword eximACLCondition spf
+syn keyword eximACLParameter pass fail softfail none neutral permerror temperror invalid
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " Define the default highlighting {{{
 " For version 5.7 and earlier: Only when not done already
