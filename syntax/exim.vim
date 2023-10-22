@@ -94,7 +94,7 @@ syn region eximRetrySection start="\s*begin\s\+retry" end="^\ze\s*begin\>" end="
 " 6.3. File inclusions in the configuration file
 syn match eximInclude "^\s*.include\(_if_exists\)\?\>"
 " 6.4. Macros in the configuration file
-syn region eximMacroDefinition matchgroup=eximMacroName start="^[A-Z]\i*\s*=" end="$" skip="\\\s*$" transparent contains=TOP
+syn region eximMacroDefinition matchgroup=eximMacroName start="^[A-Z]\i*\s*=\{1,2}" end="$" skip="\\\s*$" transparent contains=TOP
 " 6.5. Conditional skips in the configuration file
 syn match eximIfThen "^\s*.\(ifdef\|ifndef\|endifdef\|elifdef\|elifndef\|else\|endif\)\>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
