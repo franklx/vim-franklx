@@ -144,7 +144,9 @@ Plug 'ron-rs/ron.vim'
 
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
+if has("gui_running") || exists('g:neovide')
 Plug 'subnut/nvim-ghost.nvim'
+endif
 
 call plug#end()
 
