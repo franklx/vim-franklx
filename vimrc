@@ -144,9 +144,7 @@ Plug 'ron-rs/ron.vim'
 
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-if has("gui_running") || exists('g:neovide')
 Plug 'subnut/nvim-ghost.nvim'
-endif
 
 call plug#end()
 
@@ -425,4 +423,5 @@ if has("gui_running") || exists('g:neovide')
     endif
 else
     set mouse=
+    let g:nvim_ghost_disabled = 1
 endif
