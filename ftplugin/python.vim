@@ -5,4 +5,3 @@ let python_highlight_all = 1
 "let python_version_2 = 1
 
 nnoremap <silent> <Leader>ph :call franklx#InsertPyHeader()<CR>
-nnoremap <silent> <Leader>ml :call franklx#AppendModeline()<CR>

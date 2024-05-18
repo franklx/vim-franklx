@@ -269,7 +269,6 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 syntax on
-behave xterm
 color desert256
 filetype plugin indent on
 
@@ -355,6 +354,9 @@ set noswapfile
 " Set window title
 set title
 
+" Almost unlimited pattern memory (for markdown)
+"set maxmempattern=2000000
+
 inoremap # #
 
 " Quick system clipboard access
@@ -371,6 +373,9 @@ noremap <Leader>p "+gP
 " tab for brackets
 nnoremap <tab> %
 vnoremap <tab> %
+
+" append modeline
+nnoremap <silent> <Leader>ml :call franklx#AppendModeline()<CR>
 
 " TaskList
 map <leader>TL <Plug>TaskList
@@ -401,25 +406,23 @@ autocmd BufNewFile,BufRead /dev/shm/** setlocal noswapfile nobackup noundofile
 
 if has("gui_running") || exists('g:neovide')
     set guioptions=cmgt
-    set guifont=Iosevka_Term_Custom:h12
     set selectmode=mouse
     set mouse=a
     set mousemodel=popup
-    if has("unix")
-        set guifont=Iosevka\ Term\ Custom\ 11
-    endif
     if has("win32")
         set renderoptions=type:directx,taamode:2,geom:1
-    endif
-    if has("gui_macvim")
-        set guifont=DejaVu_Sans_Mono:h12
-        set anti
     endif
     if exists('g:neovide')
         "set guifont=Iosevka\ Custom\ Light:h15:#e-antialias:#h-none
         set guifont=Iosevka\ Custom\ Light:h12
+    elseif has("unix")
+        set guifont=Iosevka\ Term\ Custom\ 11
+        behave xterm
+    elseif has("gui_macvim")
+        set guifont=DejaVu_Sans_Mono:h12
+        set anti
     else
-        set printfont=Iosevka_Term_Custom:h12
+        set guifont=Iosevka_Term_Custom:h12
     endif
 else
     set mouse=
