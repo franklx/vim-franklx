@@ -268,6 +268,9 @@ set omnifunc=ale#completion#OmniFunc
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+"TableMode
+let g:table_mode_verbose = 0
+
 syntax on
 color desert256
 filetype plugin indent on
